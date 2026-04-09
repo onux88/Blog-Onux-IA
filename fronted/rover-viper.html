@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rover VIPER | IA Insights</title>
+    <meta name="description"
+        content="Descubre el Rover VIPER de la NASA: el rover que mapeará el agua lunar en el polo sur y abrirá el camino para una base lunar permanente.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syncopate:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        space: ['Syncopate', 'sans-serif'],
+                    },
+                    colors: {
+                        'space-950': '#030712',
+                        'space-900': '#0a0f1e',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-slate-950 text-slate-100 antialiased font-sans">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur border-b border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="index.html"
+                class="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">IA
+                Insights.</a>
+            <a href="index.html"
+                class="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+                Volver al inicio
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="relative h-[60vh] min-h-[400px] overflow-hidden mt-16">
+        <img src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&w=1600&q=80"
+            alt="Rover VIPER exploración polo sur lunar" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 pb-12 px-6 max-w-5xl mx-auto">
+            <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                    class="text-xs font-bold uppercase tracking-widest text-teal-300 bg-teal-900/70 border border-teal-700/50 px-3 py-1.5 rounded-full">Exploración
+                    Lunar</span>
+                <span
+                    class="text-xs font-bold uppercase tracking-widest text-slate-300 bg-slate-800/70 border border-slate-600/50 px-3 py-1.5 rounded-full">NASA
+                    · Polo Sur</span>
+            </div>
+            <h1 class="font-space font-bold text-5xl md:text-7xl text-white tracking-tight">Rover VIPER</h1>
+            <p class="text-teal-400 text-sm font-semibold uppercase tracking-widest mt-3">Rover Lunar · Polo Sur · ~100
+                Días de Misión</p>
+        </div>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="bg-slate-900 border-y border-slate-800">
+        <div class="max-w-5xl mx-auto grid grid-cols-3 divide-x divide-slate-800">
+            <div class="py-5 px-6 text-center">
+                <p class="text-xs text-slate-500 uppercase tracking-widest mb-1">Tipo</p>
+                <p class="font-bold text-white">Rover Lunar</p>
+            </div>
+            <div class="py-5 px-6 text-center">
+                <p class="text-xs text-slate-500 uppercase tracking-widest mb-1">Destino</p>
+                <p class="font-bold text-teal-400">Polo Sur Lunar</p>
+            </div>
+            <div class="py-5 px-6 text-center">
+                <p class="text-xs text-slate-500 uppercase tracking-widest mb-1">Duración</p>
+                <p class="font-bold text-white">~100 días</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <main class="max-w-5xl mx-auto px-4 py-16 space-y-12">
+
+        <!-- Descripción -->
+        <section>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-4">¿Qué es el Rover VIPER?</h2>
+            <p class="text-slate-300 text-lg leading-relaxed">
+                <strong class="text-white">VIPER</strong> (Volatiles Investigating Polar Exploration Rover) es un rover
+                de la NASA diseñado para explorar el inhóspito polo sur de la Luna en busca de hielo de agua y otros
+                compuestos volátiles. Será el primer rover americano en la Luna desde el Apollo 17 (1972) y uno de los
+                más sofisticados jamás construidos para operación autónoma en regiones de oscuridad permanente.
+            </p>
+            <p class="text-slate-400 mt-4 leading-relaxed">
+                Su descubrimiento podría ser el hallazgo más transformador de la exploración espacial moderna: si existe
+                agua accesible en el polo sur lunar, la Luna puede convertirse en un punto de reabastecimiento para
+                misiones más allá —incluyendo Marte— al producir hidrógeno y oxígeno in situ.
+            </p>
+        </section>
+
+        <!-- Objetivos -->
+        <section class="bg-slate-900 rounded-2xl border border-slate-800 p-8">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-6">🎯 Objetivos Principales</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex gap-3">
+                    <span class="text-teal-500 text-lg shrink-0">▸</span>
+                    <p class="text-slate-300">Cartografiar la distribución exacta de hielo de agua en el subsuelo del
+                        polo sur lunar.</p>
+                </div>
+                <div class="flex gap-3">
+                    <span class="text-teal-500 text-lg shrink-0">▸</span>
+                    <p class="text-slate-300">Identificar zonas con mayor concentración y accesibilidad de recursos
+                        volátiles.</p>
+                </div>
+                <div class="flex gap-3">
+                    <span class="text-teal-500 text-lg shrink-0">▸</span>
+                    <p class="text-slate-300">Evaluar si el agua lunar puede extraerse para producir combustible (H₂) y
+                        oxígeno respirable (O₂).</p>
+                </div>
+                <div class="flex gap-3">
+                    <span class="text-teal-500 text-lg shrink-0">▸</span>
+                    <p class="text-slate-300">Proporcionar datos clave para elegir el sitio de alunizaje de los
+                        astronautas Artemis.</p>
+                </div>
+                <div class="flex gap-3">
+                    <span class="text-teal-500 text-lg shrink-0">▸</span>
+                    <p class="text-slate-300">Investigar el entorno de los cráteres de sombra permanente con temperatura
+                        de -240°C.</p>
+                </div>
+                <div class="flex gap-3">
+                    <span class="text-teal-500 text-lg shrink-0">▸</span>
+                    <p class="text-slate-300">Demostrar capacidades de navegación autónoma en terrenos lunares extremos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tecnología -->
+        <section>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-6">⚙️ Tecnología Clave</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="bg-slate-900 rounded-xl p-5 border border-slate-800">
+                    <p class="text-white font-semibold mb-1">🔩 Taladro TRIDENT</p>
+                    <p class="text-slate-400 text-sm">Capaz de perforar hasta 1 metro bajo la superficie lunar para
+                        extraer y analizar muestras del subsuelo donde el hielo de agua está preservado.</p>
+                </div>
+                <div class="bg-slate-900 rounded-xl p-5 border border-slate-800">
+                    <p class="text-white font-semibold mb-1">🔬 Espectrómetro NSS + MSolo</p>
+                    <p class="text-slate-400 text-sm">El espectrómetro de neutrones NSS detecta hidrógeno a distancia;
+                        el MSolo es un espectrómetro de masa para análisis químico detallado de muestras.</p>
+                </div>
+                <div class="bg-slate-900 rounded-xl p-5 border border-slate-800">
+                    <p class="text-white font-semibold mb-1">🌑 Navegación autónoma</p>
+                    <p class="text-slate-400 text-sm">Sistema de visión computacional e IA para navegar en regiones de
+                        sombra permanente donde la luz solar nunca llega y las temperaturas son extremas.</p>
+                </div>
+                <div class="bg-slate-900 rounded-xl p-5 border border-slate-800">
+                    <p class="text-white font-semibold mb-1">☀️ Energía Adaptativa</p>
+                    <p class="text-slate-400 text-sm">Paneles solares orientables para capturar la luz solar rasante del
+                        polo sur, complementados con batería de respaldo para operar en zonas oscuras brevemente.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video -->
+        <section>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-4">🎬 Video Oficial NASA</h2>
+            <div class="rounded-2xl overflow-hidden aspect-video bg-slate-900 border border-slate-800">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/46AxqHONHEE" title="Rover VIPER NASA"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Conexión Artemis -->
+        <section class="rounded-2xl bg-gradient-to-br from-teal-900/30 to-emerald-900/20 border border-teal-800/40 p-8">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-4">🚀 Conexión con el Programa
+                Artemis</h2>
+            <p class="text-slate-300 leading-relaxed">
+                Si VIPER confirma reservas accesibles de hielo de agua, la NASA podrá planificar una <strong
+                    class="text-white">base lunar permanente</strong>. El agua puede electrolizarse para producir H₂ y
+                O₂ — combustible de cohetes y oxígeno respirable — convirtiendo la Luna en un punto de reabastecimiento
+                para misiones tripuladas hacia Marte y más allá.
+            </p>
+            <p class="text-slate-400 mt-4 leading-relaxed text-sm">
+                Los datos de VIPER influirán directamente en la selección del sitio de alunizaje de Artemis III (la
+                primera misión con astronautas en el polo sur), donde la presencia de agua helada es el recurso más
+                valioso para la sostenibilidad de la exploración humana.
+            </p>
+        </section>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-4">
+            <a href="index.html"
+                class="flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-slate-700 text-slate-300 hover:text-white hover:border-slate-500 transition-all duration-300">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+                Volver al inicio
+            </a>
+            <a href="lunar-gateway.html"
+                class="flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-blue-700 text-blue-400 hover:text-white hover:bg-blue-800/30 transition-all duration-300">
+                Ver Lunar Gateway
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+            </a>
+            <a href="https://onuxia.xyz/" target="_blank" rel="noopener"
+                class="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-400 hover:to-blue-500 text-white font-bold px-6 py-3 rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-teal-500/25">
+                🚀 Aprende sobre IA aplicada
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 mt-16">
+        <div class="max-w-5xl mx-auto py-8 px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <a href="index.html"
+                class="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">IA
+                Insights.</a>
+            <p class="text-sm text-slate-500">© 2026 IA Insights Blog y NASA Open Data. Todos los derechos reservados.</p>
+            <div class="mt-4 flex space-x-6 text-sm text-slate-500">
+                <a href="terminos.html" class="hover:text-teal-400 transition-colors">Términos</a>
+                <a href="privacidad.html" class="hover:text-teal-400 transition-colors">Privacidad</a>
+                <a href="cookies.html" class="hover:text-teal-400 transition-colors">Cookies</a>
+            </div>
+            <div class="flex space-x-5 mt-4">
+                <a href="https://x.com/NicolaRosse" target="_blank" rel="noopener noreferrer"
+                    class="text-slate-400 hover:text-teal-400 hover:scale-110 transition-all duration-300 transform">
+                    <span class="sr-only">X (Twitter)</span>
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 16 16">
+                        <path
+                            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

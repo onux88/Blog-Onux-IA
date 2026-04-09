@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunar Gateway | IA Insights</title>
+    <meta name="description"
+        content="Todo sobre el Lunar Gateway: la estación orbital que llevará a la humanidad de vuelta a la Luna con el programa Artemis de la NASA.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syncopate:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        space: ['Syncopate', 'sans-serif'],
+                    },
+                    colors: {
+                        'space-950': '#030712',
+                        'space-900': '#0a0f1e',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-slate-950 text-slate-100 antialiased font-sans">
+
+    <!-- Navbar mínimo -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur border-b border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="index.html"
+                class="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">IA
+                Insights.</a>
+            <a href="index.html"
+                class="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+                Volver al inicio
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="relative h-[60vh] min-h-[400px] overflow-hidden mt-16">
+        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1600&q=80"
+            alt="Lunar Gateway estación orbital lunar" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 pb-12 px-6 max-w-5xl mx-auto">
+            <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                    class="text-xs font-bold uppercase tracking-widest text-blue-300 bg-blue-900/70 border border-blue-700/50 px-3 py-1.5 rounded-full">Misión
+                    Futura</span>
+                <span
+                    class="text-xs font-bold uppercase tracking-widest text-slate-300 bg-slate-800/70 border border-slate-600/50 px-3 py-1.5 rounded-full">NASA
+                    · ESA · JAXA · CSA</span>
+            </div>
+            <h1 class="font-space font-bold text-5xl md:text-7xl text-white tracking-tight">Lunar Gateway</h1>
+            <p class="text-blue-400 text-sm font-semibold uppercase tracking-widest mt-3">Estación Orbital · NRHO Lunar
+                · 2025–2028</p>
+        </div>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="bg-slate-900 border-y border-slate-800">
+        <div class="max-w-5xl mx-auto grid grid-cols-3 divide-x divide-slate-800">
+            <div class="py-5 px-6 text-center">
+                <p class="text-xs text-slate-500 uppercase tracking-widest mb-1">Tipo</p>
+                <p class="font-bold text-white">Estación Orbital Modular</p>
+            </div>
+            <div class="py-5 px-6 text-center">
+                <p class="text-xs text-slate-500 uppercase tracking-widest mb-1">Órbita</p>
+                <p class="font-bold text-blue-400">NRHO Lunar</p>
+            </div>
+            <div class="py-5 px-6 text-center">
+                <p class="text-xs text-slate-500 uppercase tracking-widest mb-1">Inicio de Construcción</p>
+                <p class="font-bold text-white">2025 – 2028</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <main class="max-w-5xl mx-auto px-4 py-16 space-y-12">
+
+        <!-- Descripción -->
+        <section>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-4">¿Qué es el Lunar Gateway?</h2>
+            <p class="text-slate-300 text-lg leading-relaxed">
+                El <strong class="text-white">Lunar Gateway</strong> es una estación espacial modular proyectada para
+                orbitar la Luna en una trayectoria <em>near-rectilinear halo orbit</em> (NRHO). A diferencia de la ISS,
+                que orbita la Tierra, el Gateway residirá en el espacio cislunar y servirá como punto de escala
+                permanente para astronautas, laboratorio científico avanzado y plataforma de lanzamiento hacia la
+                superficie lunar y, eventualmente, hacia Marte.
+            </p>
+            <p class="text-slate-400 mt-4 leading-relaxed">
+                Es un proyecto verdaderamente internacional, con la participación de NASA, ESA (Agencia Espacial
+                Europea), JAXA (Japón) y CSA (Canadá). Su construcción comenzará con el módulo PPE (Power and Propulsion
+                Element) de Maxar Technologies, seguido del módulo habitable HALO.
+            </p>
+        </section>
+
+        <!-- Objetivos -->
+        <section class="bg-slate-900 rounded-2xl border border-slate-800 p-8">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-6">🎯 Objetivos Principales</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex gap-3">
+                    <span class="text-blue-500 text-lg shrink-0">▸</span>
+                    <p class="text-slate-300">Actuar como base habitable para astronautas en tránsito hacia y desde la
+                        superficie lunar.</p>
+                </div>
+                <div class="flex gap-3">
+                    <span class="text-blue-500 text-lg shrink-0">▸</span>
+                    <p class="text-slate-300">Facilitar misiones repetidas y de larga duración en el espacio cislunar.
+                    </p>
+                </div>
+                <div class="flex gap-3">
+                    <span class="text-blue-500 text-lg shrink-0">▸</span>
+                    <p class="text-slate-300">Investigación científica en microgravedad, radiación del espacio profundo,
+                        biología y física.</p>
+                </div>
+                <div class="flex gap-3">
+                    <span class="text-blue-500 text-lg shrink-0">▸</span>
+                    <p class="text-slate-300">Probar tecnologías para misiones de larga duración hacia Marte y el
+                        sistema solar exterior.</p>
+                </div>
+                <div class="flex gap-3">
+                    <span class="text-blue-500 text-lg shrink-0">▸</span>
+                    <p class="text-slate-300">Servir como nodo de comunicaciones y retransmisión entre Tierra y la Luna.
+                    </p>
+                </div>
+                <div class="flex gap-3">
+                    <span class="text-blue-500 text-lg shrink-0">▸</span>
+                    <p class="text-slate-300">Permitir el acceso global a la superficie lunar (incluido el polo sur)
+                        desde una única plataforma orbital.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tecnología -->
+        <section>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-6">⚙️ Tecnología Clave</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="bg-slate-900 rounded-xl p-5 border border-slate-800">
+                    <p class="text-white font-semibold mb-1">🔋 Propulsión Eléctrica Solar (SEP)</p>
+                    <p class="text-slate-400 text-sm">Sistema de alta potencia que usa energía solar para ionizar xenón
+                        y generar empuje eficiente para maniobras orbitales de largo plazo.</p>
+                </div>
+                <div class="bg-slate-900 rounded-xl p-5 border border-slate-800">
+                    <p class="text-white font-semibold mb-1">🛡️ Blindaje Contra Radiación</p>
+                    <p class="text-slate-400 text-sm">Módulos diseñados para proteger a la tripulación de la radiación
+                        cósmica del espacio profundo, mucho más intensa que en órbita terrestre.</p>
+                </div>
+                <div class="bg-slate-900 rounded-xl p-5 border border-slate-800">
+                    <p class="text-white font-semibold mb-1">🤝 Acoplamiento Modular</p>
+                    <p class="text-slate-400 text-sm">Diseño para recibir vehículos Orion, módulos de alunizaje
+                        comerciales y naves de proveedores logísticos internacionales.</p>
+                </div>
+                <div class="bg-slate-900 rounded-xl p-5 border border-slate-800">
+                    <p class="text-white font-semibold mb-1">📡 Comunicaciones Avanzadas</p>
+                    <p class="text-slate-400 text-sm">Sistema de banda ancha láser y RF para comunicaciones de alta
+                        velocidad Tierra–Gateway–superficie lunar.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video -->
+        <section>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-4">🎬 Video Oficial NASA</h2>
+            <div class="rounded-2xl overflow-hidden aspect-video bg-slate-900 border border-slate-800">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/3yXCpT0HkPo" title="Lunar Gateway NASA"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Conexión Artemis -->
+        <section class="rounded-2xl bg-gradient-to-br from-blue-900/30 to-indigo-900/20 border border-blue-800/40 p-8">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-4">🚀 Conexión con el Programa
+                Artemis</h2>
+            <p class="text-slate-300 leading-relaxed">
+                El Gateway es la <strong class="text-white">pieza central del Programa Artemis</strong>. Desde allí, los
+                módulos de alunizaje HLS (Human Landing System) de SpaceX y Blue Origin descenderán hacia la superficie
+                lunar. Su posición orbital estratégica permite acceso a cualquier punto de la Luna — algo imposible
+                desde órbitas terrestres bajas — sentando las bases para una presencia humana permanente en la Luna y
+                futuras misiones tripuladas hacia Marte.
+            </p>
+            <p class="text-slate-400 mt-4 leading-relaxed text-sm">
+                La arquitectura del Gateway permite que los astronautas permanezcan a bordo mientras los vehículos de
+                descenso realizan múltiples viajes a la superficie, reduciendo drásticamente el costo y complejidad de
+                las misiones comparado con el modelo Apollo.
+            </p>
+        </section>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-4">
+            <a href="index.html"
+                class="flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-slate-700 text-slate-300 hover:text-white hover:border-slate-500 transition-all duration-300">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+                Volver al inicio
+            </a>
+            <a href="rover-viper.html"
+                class="flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-teal-700 text-teal-400 hover:text-white hover:bg-teal-800/30 transition-all duration-300">
+                Ver Rover VIPER
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+            </a>
+            <a href="https://onuxia.xyz/" target="_blank" rel="noopener"
+                class="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-400 hover:to-blue-500 text-white font-bold px-6 py-3 rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-teal-500/25">
+                🚀 Aprende sobre IA aplicada
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 mt-16">
+        <div class="max-w-5xl mx-auto py-8 px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <a href="index.html"
+                class="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">IA
+                Insights.</a>
+            <p class="text-sm text-slate-500">© 2026 IA Insights Blog y NASA Open Data. Todos los derechos reservados.</p>
+            <div class="mt-4 flex space-x-6 text-sm text-slate-500">
+                <a href="terminos.html" class="hover:text-blue-400 transition-colors">Términos</a>
+                <a href="privacidad.html" class="hover:text-blue-400 transition-colors">Privacidad</a>
+                <a href="cookies.html" class="hover:text-blue-400 transition-colors">Cookies</a>
+            </div>
+            <div class="flex space-x-5 mt-4">
+                <a href="https://x.com/NicolaRosse" target="_blank" rel="noopener noreferrer"
+                    class="text-slate-400 hover:text-blue-400 hover:scale-110 transition-all duration-300 transform">
+                    <span class="sr-only">X (Twitter)</span>
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 16 16">
+                        <path
+                            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

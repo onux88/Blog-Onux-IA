@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteligencia Artificial | Insights</title>
+    <meta name="description"
+        content="Descubre el fascinante mundo de la Inteligencia Artificial: conceptos, aplicaciones y recursos para aprender.">
+
+    <!-- Fuentes modernas: Inter y Syncopate para títulos espaciales -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syncopate:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS (usando CDN para modernidad y diseño ágil) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        space: ['Syncopate', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            500: '#14b8a6', // Teal
+                            600: '#0d9488',
+                            900: '#134e4a',
+                        },
+                        space: {
+                            950: '#05070a',
+                            900: '#0b0f19',
+                            800: '#111827',
+                            muted: '#9ca3af'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- ⚡ Script temprano: evita flash de contenido en usuarios que ya vieron el intro -->
+    <script>
+            (function () {
+                if (localStorage.getItem('introVisto')) {
+                    // Inyectar estilo que muestre mainContent inmediatamente
+                    document.write('<style>#intro{display:none!important}#mainContent{opacity:1!important;transition:none!important}</style>');
+                }
+            })();
+    </script>
+
+    <style>
+        /* Animaciones personalizadas para Artemis */
+        .stars-container {
+            background: transparent;
+        }
+
+        .hero-bg-artemis {
+            background-image: linear-gradient(to bottom, rgba(11, 15, 25, 0.4) 0%, rgba(248, 250, 252, 1) 100%), url('https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.2), 0 10px 10px -5px rgba(59, 130, 246, 0.1);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-slate-50 text-slate-900 antialiased flex flex-col min-h-screen selection:bg-teal-200 selection:text-teal-900">
+
+    <!-- Animación del Cohete Inicial (Cinematic Intro) -->
+    <div id="intro"
+        class="fixed inset-0 z-[100] bg-space-950 flex items-center justify-center overflow-hidden transition-opacity duration-1000"
+        style="display:none;">
+
+        <!-- Capas de Estrellas -->
+        <div class="stars-container absolute inset-0 z-0"></div>
+        <div class="stars-container-2 absolute inset-0 z-0"></div>
+
+        <!-- Contenido Central -->
+        <div class="relative z-20 flex flex-col items-center text-center px-4">
+            <h1 id="intro-title"
+                class="font-space font-bold text-4xl md:text-7xl text-white tracking-[0.2em] uppercase opacity-0 transform translate-y-10 transition-all duration-1000">
+                Misión Artemis
+            </h1>
+            <p id="intro-subtitle"
+                class="text-blue-400 font-medium text-lg md:text-2xl mt-4 tracking-widest opacity-0 transform translate-y-10 transition-all duration-1000 delay-300">
+                EL REGRESO A LA LUNA
+            </p>
+        </div>
+
+        <!-- Ensamblaje del Cohete -->
+        <div id="rocket-assembly"
+            class="absolute bottom-[-200px] left-1/2 -translate-x-1/2 z-10 w-24 md:w-32 transition-transform duration-[3000ms] ease-in">
+            <!-- Cuerpo del Cohete (SVG) -->
+            <svg viewBox="0 0 100 200" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="w-full drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                <!-- Cuerpo principal -->
+                <path d="M50 10C35 10 25 50 25 100V160H75V100C75 50 65 10 50 10Z" fill="url(#rocketGrad)" />
+                <!-- Punta -->
+                <path d="M50 10C45 10 35 30 35 60H65C65 30 55 10 50 10Z" fill="#1e293b" />
+                <!-- Ventana -->
+                <circle cx="50" cy="80" r="8" fill="#3b82f6" fill-opacity="0.8" />
+                <circle cx="50" cy="80" r="5" fill="#bae6fd" />
+                <!-- Aletas -->
+                <path d="M25 130L5 160H25V130Z" fill="#1e293b" />
+                <path d="M75 130L95 160H75V130Z" fill="#1e293b" />
+                <!-- Motor -->
+                <rect x="35" y="160" width="30" height="10" rx="2" fill="#334155" />
+
+                <defs>
+                    <linearGradient id="rocketGrad" x1="50" y1="10" x2="50" y2="160" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#f8fafc" />
+                        <stop offset="1" stop-color="#cbd5e1" />
+                    </linearGradient>
+                </defs>
+            </svg>
+
+            <!-- Efectos de Propulsión -->
+            <div id="rocket-engine-effects"
+                class="absolute top-[165px] left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500">
+                <div
+                    class="engine-flare absolute left-1/2 -translate-x-1/2 w-4 md:w-6 h-32 md:h-48 bg-gradient-to-b from-white via-orange-500 to-transparent blur-md animate-pulse">
+                </div>
+                <div
+                    class="engine-glow absolute left-1/2 -translate-x-1/2 w-12 md:w-16 h-12 md:h-16 bg-orange-500 rounded-full blur-xl opacity-80">
+                </div>
+                <div class="smoke-particles-container"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Contenido Principal -->
+    <div id="mainContent" style="opacity: 0; transition: opacity 0.8s ease;">
+        <!-- Menú de Navegación Original AI -->
+        <nav class="fixed w-full z-50 transition-all duration-300 bg-white/70 backdrop-blur-md border-b border-transparent"
+            id="navbar">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                    <div class="flex-shrink-0">
+                        <a href="index.html" class="text-2xl font-black tracking-tight"
+                            style="background: linear-gradient(to right, #14b8a6, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                            IA Insights.
+                        </a>
+                    </div>
+                    <!-- Menú Desktop -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#artemis"
+                            class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Especial
+                            NASA</a>
+                        <a href="#introduccion"
+                            class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Introducción</a>
+                        <a href="#aplicaciones"
+                            class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Aplicaciones</a>
+                        <a href="#aprende-mas"
+                            class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Aprende
+                            más</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Inicio del contenido principal -->
+        <main class="flex-grow">
+
+            <!-- EL FRONTED MUY BUENO: Noticia Principal Artemis (Hero Section) -->
+            <header id="artemis"
+                class="hero-bg-artemis relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+                <!-- Desvanecimiento hacia blanco al fondo para unir con la página AI -->
+
+                <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-12 mb-20 text-white">
+                    <span
+                        class="inline-block py-1 px-4 rounded-full bg-blue-900/40 border border-blue-500/30 text-blue-300 text-xs md:text-sm font-bold tracking-wider uppercase mb-6 backdrop-blur-sm shadow-sm inline-flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                        Destacado Especial
+                    </span>
+                    <h1
+                        class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 leading-tight drop-shadow-2xl">
+                        El Regreso a la <br><span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300">Luna</span>
+                    </h1>
+                    <p
+                        class="mt-6 text-lg md:text-xl text-slate-200 max-w-3xl mx-auto font-medium leading-relaxed drop-shadow-md">
+                        El programa Artemis no es solo una visita; es el establecimiento de una base sostenible para la
+                        exploración humana impulsada por la robótica avanzada e Inteligencia Artificial.
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row justify-center gap-6">
+                        <button
+                            class="open-artemis-btn rounded-full px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] transition-all transform hover:-translate-y-1 text-base md:text-lg flex items-center justify-center gap-3">
+                            <span>Ver Artículo Artemis Completo</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </button>
+                        <a href="#introduccion"
+                            class="rounded-full px-8 py-4 text-slate-800 bg-white border border-slate-200 font-bold hover:bg-slate-50 transition-all text-base md:text-lg flex items-center justify-center">
+                            Continuar a IA Insights
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Sección Hero Original AI (Presentación principal) -->
+            <header
+                class="relative overflow-hidden bg-slate-50 pt-16 pb-24 text-center isolate border-t border-slate-200">
+                <!-- Círculo de fondo con blur (efecto moderno) -->
+                <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+                    aria-hidden="true">
+                    <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#14b8a6] to-[#3b82f6] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+                    </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-slate-900 leading-tight">
+                        El Futuro es la <br>
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-600 block mt-2">Inteligencia
+                            Artificial</span>
+                    </h1>
+                    <p class="mt-6 text-xl text-slate-600 max-w-2xl mx-auto font-light leading-relaxed">
+                        Descubre cómo las máquinas aprenden, razonan y cambiarán nuestro mundo. Artículos, tutoriales y
+                        reflexiones sobre el mundo del mañana.
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="#introduccion"
+                            class="btn-primary rounded-full px-8 py-3.5 text-white bg-teal-500 font-medium shadow-lg hover:shadow-teal-500/30 transition-all transform hover:-translate-y-1">
+                            Comenzar a leer
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Controles de Filtro -->
+            <section class="border-b border-slate-200 bg-white sticky top-20 z-40 shadow-sm" id="barra-filtros">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                    <div class="flex flex-wrap gap-3 justify-center md:justify-start" id="filtros-container">
+                        <button
+                            class="filter-btn active bg-teal-500 text-white px-6 py-2 rounded-full border border-teal-500 text-sm font-medium transition-colors"
+                            data-filter="all">Todos</button>
+                        <button
+                            class="filter-btn px-6 py-2 rounded-full border border-slate-200 text-sm font-medium hover:text-brand-500 transition-colors"
+                            data-filter="Introducción">Introducción</button>
+                        <button
+                            class="filter-btn px-6 py-2 rounded-full border border-slate-200 text-sm font-medium hover:text-brand-500 transition-colors"
+                            data-filter="Aplicaciones">Aplicaciones</button>
+                        <button
+                            class="filter-btn px-6 py-2 rounded-full border border-slate-200 text-sm font-medium hover:text-brand-500 transition-colors"
+                            data-filter="Aprende más">Aprende Más</button>
+                    </div>
+                </div>
+            </section>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+                <!-- Sección: Introducción -->
+                <section id="introduccion" class="mb-24 scroll-mt-32 category-section">
+                    <div class="mb-10">
+                        <div class="flex items-center justify-between mb-2">
+                            <h2 class="text-3xl font-bold text-slate-800 tracking-tight">Introducción</h2>
+                            <div class="h-px bg-slate-200 flex-grow ml-6 hidden sm:block"></div>
+                        </div>
+                        <p class="text-slate-500">Conoce los fundamentos básicos y el impacto de esta tecnología.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Post 1 -->
+                        <article
+                            class="post-card group bg-white rounded-2xl shadow-[0_2px_10px_-3px_rgba(6,81,237,0.1)] hover:shadow-2xl transition-all duration-300 border border-slate-100/50 overflow-hidden flex flex-col h-full transform hover:-translate-y-1"
+                            data-category="Introducción">
+                            <div class="aspect-video w-full overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800"
+                                    alt="El Despertar de la IA Generativa"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1 bg-white/90 backdrop-blur-sm text-xs font-semibold rounded-full text-teal-600 shadow-sm border border-white/50 inline-block">Introducción</span>
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow relative">
+                                <div class="absolute h-1 w-12 bg-gradient-to-r from-teal-400 to-blue-500 top-0 left-6">
+                                </div>
+                                <h3
+                                    class="text-xl font-bold mb-3 text-slate-900 group-hover:text-teal-600 transition-colors line-clamp-2">
+                                    El Despertar de la IA Generativa</h3>
+                                <p class="text-slate-500 mb-6 flex-grow leading-relaxed text-sm line-clamp-3">La
+                                    inteligencia artificial ha avanzado a pasos agigantados. Hoy en día, los modelos
+                                    generativos son capaces de crear texto, imágenes y código con una fluidez asombrosa.
+                                    ¿Hacia dónde nos dirigimos?</p>
+                                <div class="mt-auto border-t border-slate-100 pt-4">
+                                    <a href="articulo1-ia-generativa.html"
+                                        class="inline-flex items-center text-sm text-teal-600 font-semibold hover:text-teal-900 group">Leer
+                                        artículo completo <svg
+                                            class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        </svg></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Post 2 -->
+                        <article
+                            class="post-card group bg-white rounded-2xl shadow-[0_2px_10px_-3px_rgba(6,81,237,0.1)] hover:shadow-2xl transition-all duration-300 border border-slate-100/50 overflow-hidden flex flex-col h-full transform hover:-translate-y-1"
+                            data-category="Introducción">
+                            <div class="aspect-video w-full overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800"
+                                    alt="Conceptos Básicos: Machine Learning"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1 bg-white/90 backdrop-blur-sm text-xs font-semibold rounded-full text-teal-600 shadow-sm border border-white/50 inline-block">Introducción</span>
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow relative">
+                                <div class="absolute h-1 w-12 bg-gradient-to-r from-teal-400 to-blue-500 top-0 left-6">
+                                </div>
+                                <h3
+                                    class="text-xl font-bold mb-3 text-slate-900 group-hover:text-teal-600 transition-colors line-clamp-2">
+                                    Conceptos Básicos: Machine Learning</h3>
+                                <p class="text-slate-500 mb-6 flex-grow leading-relaxed text-sm line-clamp-3">El Machine
+                                    Learning o aprendizaje automático es la rama de la IA que permite a las máquinas
+                                    aprender y mejorar a partir de la experiencia. No se programa explícitamente, sino
+                                    que
+                                    se entrena con datos.</p>
+                                <div class="mt-auto border-t border-slate-100 pt-4">
+                                    <a href="articulo2-machine-learning.html"
+                                        class="inline-flex items-center text-sm text-teal-600 font-semibold hover:text-teal-900 group">Leer
+                                        artículo completo <svg
+                                            class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        </svg></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Sección: Aplicaciones -->
+                <section id="aplicaciones" class="mb-24 scroll-mt-32 category-section">
+                    <div class="mb-10">
+                        <div class="flex items-center justify-between mb-2">
+                            <h2 class="text-3xl font-bold text-slate-800 tracking-tight">Aplicaciones</h2>
+                            <div class="h-px bg-slate-200 flex-grow ml-6 hidden sm:block"></div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Post 3 -->
+                        <article
+                            class="post-card group bg-white rounded-2xl shadow-[0_2px_10px_-3px_rgba(6,81,237,0.1)] hover:shadow-2xl transition-all duration-300 border border-slate-100/50 overflow-hidden flex flex-col h-full transform hover:-translate-y-1"
+                            data-category="Aplicaciones">
+                            <div class="aspect-video w-full overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=800"
+                                    alt="IA Revolucionando la Medicina"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1 bg-white/90 backdrop-blur-sm text-xs font-semibold rounded-full text-teal-600 shadow-sm border border-white/50 inline-block">Aplicaciones</span>
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow relative">
+                                <div class="absolute h-1 w-12 bg-gradient-to-r from-teal-400 to-blue-500 top-0 left-6">
+                                </div>
+                                <h3
+                                    class="text-xl font-bold mb-3 text-slate-900 group-hover:text-teal-600 transition-colors line-clamp-2">
+                                    IA Revolucionando la Medicina</h3>
+                                <p class="text-slate-500 mb-6 flex-grow leading-relaxed text-sm line-clamp-3">Los
+                                    algoritmos
+                                    de aprendizaje profundo están ayudando a diagnosticar enfermedades de forma más
+                                    temprana
+                                    y precisa, descubriendo nuevos tratamientos.</p>
+                                <div class="mt-auto border-t border-slate-100 pt-4">
+                                    <a href="articulo3-medicina.html"
+                                        class="inline-flex items-center text-sm text-teal-600 font-semibold hover:text-teal-900 group">Leer
+                                        artículo completo <svg
+                                            class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        </svg></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Post 4 -->
+                        <article
+                            class="post-card group bg-white rounded-2xl shadow-[0_2px_10px_-3px_rgba(6,81,237,0.1)] hover:shadow-2xl transition-all duration-300 border border-slate-100/50 overflow-hidden flex flex-col h-full transform hover:-translate-y-1"
+                            data-category="Aplicaciones">
+                            <div class="aspect-video w-full overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800"
+                                    alt="Automatización en la Industria 4.0"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1 bg-white/90 backdrop-blur-sm text-xs font-semibold rounded-full text-teal-600 shadow-sm border border-white/50 inline-block">Aplicaciones</span>
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow relative">
+                                <div class="absolute h-1 w-12 bg-gradient-to-r from-teal-400 to-blue-500 top-0 left-6">
+                                </div>
+                                <h3
+                                    class="text-xl font-bold mb-3 text-slate-900 group-hover:text-teal-600 transition-colors line-clamp-2">
+                                    Automatización en la Industria 4.0</h3>
+                                <p class="text-slate-500 mb-6 flex-grow leading-relaxed text-sm line-clamp-3">Las
+                                    fábricas
+                                    modernas utilizan inteligencia artificial para optimizar cadenas de suministro y
+                                    predecir el mantenimiento de maquinarias.</p>
+                                <div class="mt-auto border-t border-slate-100 pt-4">
+                                    <a href="articulo4-industria.html"
+                                        class="inline-flex items-center text-sm text-teal-600 font-semibold hover:text-teal-900 group">Leer
+                                        artículo completo <svg
+                                            class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        </svg></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Sección: Aprende más -->
+                <section id="aprende-mas" class="mb-24 scroll-mt-32 category-section">
+                    <div class="mb-10">
+                        <div class="flex items-center justify-between mb-2">
+                            <h2 class="text-3xl font-bold text-slate-800 tracking-tight">Aprende Más</h2>
+                            <div class="h-px bg-slate-200 flex-grow ml-6 hidden sm:block"></div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Post 5 -->
+                        <article
+                            class="post-card group bg-white rounded-2xl shadow-[0_2px_10px_-3px_rgba(6,81,237,0.1)] hover:shadow-2xl transition-all duration-300 border border-slate-100/50 overflow-hidden flex flex-col h-full transform hover:-translate-y-1"
+                            data-category="Aprende más">
+                            <div class="aspect-video w-full overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800"
+                                    alt="Cursos Recomendados para Empezar"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1 bg-white/90 backdrop-blur-sm text-xs font-semibold rounded-full text-teal-600 shadow-sm border border-white/50 inline-block">Aprende
+                                        más</span>
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow relative">
+                                <div class="absolute h-1 w-12 bg-gradient-to-r from-teal-400 to-blue-500 top-0 left-6">
+                                </div>
+                                <h3
+                                    class="text-xl font-bold mb-3 text-slate-900 group-hover:text-teal-600 transition-colors line-clamp-2">
+                                    Cursos Recomendados para Empezar</h3>
+                                <p class="text-slate-500 mb-6 flex-grow leading-relaxed text-sm line-clamp-3">
+                                    Plataformas
+                                    gratuitas y de pago para aprender Python, matemáticas y frameworks como TensorFlow o
+                                    PyTorch.</p>
+                                <div class="mt-auto border-t border-slate-100 pt-4">
+                                    <a href="articulo5-cursos.html"
+                                        class="inline-flex items-center text-sm text-teal-600 font-semibold hover:text-teal-900 group">Leer
+                                        artículo completo <svg
+                                            class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        </svg></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Post 6 -->
+                        <article
+                            class="post-card group bg-white rounded-2xl shadow-[0_2px_10px_-3px_rgba(6,81,237,0.1)] hover:shadow-2xl transition-all duration-300 border border-slate-100/50 overflow-hidden flex flex-col h-full transform hover:-translate-y-1"
+                            data-category="Aprende más">
+                            <div class="aspect-video w-full overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
+                                    alt="El Peligro de los Sesgos en la IA"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1 bg-white/90 backdrop-blur-sm text-xs font-semibold rounded-full text-teal-600 shadow-sm border border-white/50 inline-block">Aprende
+                                        más</span>
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow relative">
+                                <div class="absolute h-1 w-12 bg-gradient-to-r from-teal-400 to-blue-500 top-0 left-6">
+                                </div>
+                                <h3
+                                    class="text-xl font-bold mb-3 text-slate-900 group-hover:text-teal-600 transition-colors line-clamp-2">
+                                    El Peligro de los Sesgos en la IA</h3>
+                                <p class="text-slate-500 mb-6 flex-grow leading-relaxed text-sm line-clamp-3">Es crucial
+                                    entender la ética en la IA. Los modelos pueden perpetuar sesgos y discriminación si
+                                    no
+                                    se diseñan con cuidado.</p>
+                                <div class="mt-auto border-t border-slate-100 pt-4">
+                                    <a href="articulo6-sesgos.html"
+                                        class="inline-flex items-center text-sm text-teal-600 font-semibold hover:text-teal-900 group">Leer
+                                        artículo completo <svg
+                                            class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        </svg></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- ════ SECCIÓN: MISIONES ESPACIALES ════ -->
+                <section id="otras-paginas" class="mb-20 scroll-mt-32 category-section">
+                    <div class="flex items-center justify-between mb-12">
+                        <div>
+                            <p class="text-xs font-bold uppercase tracking-widest text-teal-500 mb-1">Programa Artemis
+                            </p>
+                            <h2 class="text-3xl font-extrabold text-slate-800 tracking-tight">Otras Misiones de Interés
+                            </h2>
+                        </div>
+                        <div class="h-px bg-slate-200 flex-grow ml-8 hidden md:block"></div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                        <!-- ── CARD: Lunar Gateway ── -->
+                        <article
+                            class="mission-reveal group relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 transition-all duration-500 hover:border-blue-500/40 hover:shadow-2xl hover:shadow-blue-900/30 hover:-translate-y-1">
+                            <!-- Imagen -->
+                            <div class="relative h-52 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=900&q=80"
+                                    alt="Lunar Gateway estación orbital lunar"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent">
+                                </div>
+                                <!-- Badge flotante -->
+                                <div class="absolute top-4 left-4 flex gap-2">
+                                    <span
+                                        class="text-[10px] font-bold uppercase tracking-widest text-blue-300 bg-blue-900/70 backdrop-blur border border-blue-700/50 px-2.5 py-1 rounded-full">Misión
+                                        Futura</span>
+                                    <span
+                                        class="text-[10px] font-bold uppercase tracking-widest text-slate-300 bg-slate-800/70 backdrop-blur border border-slate-600/50 px-2.5 py-1 rounded-full">NASA
+                                        · ESA · JAXA</span>
+                                </div>
+                            </div>
+
+                            <!-- Contenido -->
+                            <div class="p-6">
+                                <h3 class="text-2xl font-extrabold text-white mb-1 tracking-tight">Lunar Gateway</h3>
+                                <p class="text-blue-400 text-xs font-semibold uppercase tracking-widest mb-4">Estación
+                                    Orbital · NRHO Lunar · 2025–2028</p>
+
+                                <!-- Stats pill row -->
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span
+                                        class="inline-flex items-center gap-1.5 text-xs text-slate-300 bg-slate-800 px-3 py-1.5 rounded-full border border-slate-700">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-blue-400 inline-block"></span> Órbita
+                                        halo NRHO
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center gap-1.5 text-xs text-slate-300 bg-slate-800 px-3 py-1.5 rounded-full border border-slate-700">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-blue-400 inline-block"></span>
+                                        Propulsión Solar (SEP)
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center gap-1.5 text-xs text-slate-300 bg-slate-800 px-3 py-1.5 rounded-full border border-slate-700">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-blue-400 inline-block"></span> Base
+                                        habitada
+                                    </span>
+                                </div>
+
+                                <p class="text-slate-400 text-sm leading-relaxed line-clamp-2 mb-5">
+                                    Estación espacial modular en órbita lunar. Servirá como punto de escala para
+                                    astronautas en tránsito hacia la superficie de la Luna y como laboratorio científico
+                                    en el espacio cislunar.
+                                </p>
+
+                                <a href="lunar-gateway.html"
+                                    class="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold px-5 py-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30 group/btn">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    Ver Misión Completa
+                                    <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- ── CARD: Rover VIPER ── -->
+                        <article
+                            class="mission-reveal group relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 transition-all duration-500 hover:border-teal-500/40 hover:shadow-2xl hover:shadow-teal-900/30 hover:-translate-y-1">
+                            <!-- Imagen -->
+                            <div class="relative h-52 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&w=900&q=80"
+                                    alt="Rover VIPER exploración polo sur lunar"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent">
+                                </div>
+                                <!-- Badge flotante -->
+                                <div class="absolute top-4 left-4 flex gap-2">
+                                    <span
+                                        class="text-[10px] font-bold uppercase tracking-widest text-teal-300 bg-teal-900/70 backdrop-blur border border-teal-700/50 px-2.5 py-1 rounded-full">Exploración
+                                        Lunar</span>
+                                    <span
+                                        class="text-[10px] font-bold uppercase tracking-widest text-slate-300 bg-slate-800/70 backdrop-blur border border-slate-600/50 px-2.5 py-1 rounded-full">NASA
+                                        · Polo Sur</span>
+                                </div>
+                            </div>
+
+                            <!-- Contenido -->
+                            <div class="p-6">
+                                <h3 class="text-2xl font-extrabold text-white mb-1 tracking-tight">Rover VIPER</h3>
+                                <p class="text-teal-400 text-xs font-semibold uppercase tracking-widest mb-4">Rover
+                                    Lunar · Polo Sur · 100 Días de Misión</p>
+
+                                <!-- Stats pill row -->
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span
+                                        class="inline-flex items-center gap-1.5 text-xs text-slate-300 bg-slate-800 px-3 py-1.5 rounded-full border border-slate-700">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-teal-400 inline-block"></span> Taladro
+                                        TRIDENT
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center gap-1.5 text-xs text-slate-300 bg-slate-800 px-3 py-1.5 rounded-full border border-slate-700">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-teal-400 inline-block"></span>
+                                        Detección de agua
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center gap-1.5 text-xs text-slate-300 bg-slate-800 px-3 py-1.5 rounded-full border border-slate-700">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-teal-400 inline-block"></span>
+                                        Autonomía total
+                                    </span>
+                                </div>
+
+                                <p class="text-slate-400 text-sm leading-relaxed line-clamp-2 mb-5">
+                                    VIPER mapeará depósitos de hielo de agua en el polo sur lunar. Su descubrimiento
+                                    podría convertir la Luna en un punto de reabastecimiento para cohetes en ruta a
+                                    Marte.
+                                </p>
+
+                                <a href="rover-viper.html"
+                                    class="w-full flex items-center justify-center gap-2 bg-teal-600 hover:bg-teal-500 text-white text-sm font-bold px-5 py-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/30 group/btn">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    Ver Misión Completa
+                                    <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+            </div><!-- /.content-area -->
+        </main>
+        <div id="modal-gateway"
+            class="mission-modal fixed inset-0 z-[200] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300"
+            aria-modal="true" role="dialog">
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeMissionModal('gateway')">
+            </div>
+            <div
+                class="modal-panel relative w-full max-w-2xl max-h-[90vh] bg-slate-900 rounded-2xl border border-slate-700 overflow-y-auto shadow-2xl transform scale-95 transition-transform duration-300">
+                <!-- Hero imagen modal -->
+                <div class="relative h-52 overflow-hidden rounded-t-2xl">
+                    <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=900&q=80"
+                        alt="Lunar Gateway" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent">
+                    </div>
+                    <button onclick="closeMissionModal('gateway')"
+                        class="absolute top-4 right-4 w-9 h-9 bg-slate-800/80 backdrop-blur rounded-full flex items-center justify-center text-slate-300 hover:text-white hover:bg-slate-700 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <div class="absolute bottom-4 left-6">
+                        <span
+                            class="text-[10px] font-bold uppercase tracking-widest text-blue-300 bg-blue-900/70 backdrop-blur border border-blue-700/40 px-2.5 py-1 rounded-full">NASA
+                            · ESA · JAXA · CSA</span>
+                        <h2 class="text-3xl font-extrabold text-white mt-2">Lunar Gateway</h2>
+                    </div>
+                </div>
+
+                <!-- Cuerpo modal -->
+                <div class="p-6 space-y-6">
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-3">
+                        <div class="bg-slate-800/60 rounded-xl p-3 text-center border border-slate-700/50">
+                            <p class="text-[10px] text-slate-500 uppercase tracking-wide">Tipo</p>
+                            <p class="text-sm font-bold text-white mt-1">Estación Orbital</p>
+                        </div>
+                        <div class="bg-slate-800/60 rounded-xl p-3 text-center border border-slate-700/50">
+                            <p class="text-[10px] text-slate-500 uppercase tracking-wide">Órbita</p>
+                            <p class="text-sm font-bold text-blue-400 mt-1">NRHO Lunar</p>
+                        </div>
+                        <div class="bg-slate-800/60 rounded-xl p-3 text-center border border-slate-700/50">
+                            <p class="text-[10px] text-slate-500 uppercase tracking-wide">Inicio</p>
+                            <p class="text-sm font-bold text-white mt-1">2025–2028</p>
+                        </div>
+                    </div>
+
+                    <!-- Descripción -->
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">¿Qué es el
+                            Lunar Gateway?</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            El Lunar Gateway es una estación espacial modular proyectada para orbitar la Luna en
+                            una trayectoria near-rectilinear halo orbit (NRHO). A diferencia de la ISS, estará
+                            en el espacio cislunar y servirá como punto de escala permanente para astronautas,
+                            laboratorio científico y plataforma de lanzamiento hacia la superficie lunar y,
+                            eventualmente, hacia Marte.
+                        </p>
+                    </div>
+
+                    <!-- Objetivos -->
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">🎯 Objetivos
+                            Principales</h3>
+                        <ul class="space-y-2">
+                            <li class="flex gap-3 text-sm text-slate-300"><span
+                                    class="text-blue-500 shrink-0 mt-0.5">▸</span>Actuar como base habitable
+                                para astronautas en tránsito a la Luna.</li>
+                            <li class="flex gap-3 text-sm text-slate-300"><span
+                                    class="text-blue-500 shrink-0 mt-0.5">▸</span>Facilitar misiones repetidas a
+                                cualquier punto de la superficie lunar.</li>
+                            <li class="flex gap-3 text-sm text-slate-300"><span
+                                    class="text-blue-500 shrink-0 mt-0.5">▸</span>Investigación en
+                                microgravedad, radiación del espacio profundo y biología.</li>
+                            <li class="flex gap-3 text-sm text-slate-300"><span
+                                    class="text-blue-500 shrink-0 mt-0.5">▸</span>Servir como nodo de
+                                comunicaciones entre Tierra y la superficie lunar.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Tecnología -->
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">⚙️ Tecnología
+                            Clave</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <div
+                                class="bg-slate-800/40 rounded-lg p-3 border border-slate-700/40 text-sm text-slate-300">
+                                🔋 Propulsión eléctrica solar (SEP) de alta potencia</div>
+                            <div
+                                class="bg-slate-800/40 rounded-lg p-3 border border-slate-700/40 text-sm text-slate-300">
+                                🛡️ Módulos con blindaje contra radiación del espacio profundo</div>
+                            <div
+                                class="bg-slate-800/40 rounded-lg p-3 border border-slate-700/40 text-sm text-slate-300">
+                                🤝 Acoplamiento modular con vehículos Orion y comerciales</div>
+                            <div
+                                class="bg-slate-800/40 rounded-lg p-3 border border-slate-700/40 text-sm text-slate-300">
+                                📡 Comunicaciones retransmitidas de banda ancha Tierra–Luna</div>
+                        </div>
+                    </div>
+
+                    <!-- Video -->
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">🎬 Video NASA
+                            Oficial</h3>
+                        <div class="rounded-xl overflow-hidden aspect-video bg-slate-800">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/3yXCpT0HkPo"
+                                title="Lunar Gateway NASA" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Artemis connection -->
+                    <div
+                        class="rounded-xl bg-gradient-to-br from-blue-900/30 to-indigo-900/20 border border-blue-800/40 p-5">
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">🚀 Conexión
+                            con Artemis</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            El Gateway es la pieza central del Programa Artemis. Desde allí, los módulos de
+                            alunizaje HLS (Human Landing System) descenderán hacia la superficie. Su posición
+                            orbital estratégica permite acceso global a la Luna —algo imposible desde órbitas
+                            terrestres— sentando las bases para presencia humana permanente y misiones hacia
+                            Marte.
+                        </p>
+                    </div>
+
+                    <!-- CTA monetización -->
+                    <a href="https://onuxia.xyz/" target="_blank" rel="noopener"
+                        class="flex items-center justify-center gap-3 w-full bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-400 hover:to-blue-500 text-white font-bold px-6 py-4 rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-teal-500/25 hover:scale-[1.02]">
+                        <span class="text-xl">🚀</span>
+                        <span>Aprende más sobre tecnología e IA aplicada</span>
+                        <svg class="w-5 h-5 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal: Rover VIPER -->
+        <div id="modal-viper"
+            class="mission-modal fixed inset-0 z-[200] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300"
+            aria-modal="true" role="dialog">
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeMissionModal('viper')">
+            </div>
+            <div
+                class="modal-panel relative w-full max-w-2xl max-h-[90vh] bg-slate-900 rounded-2xl border border-slate-700 overflow-y-auto shadow-2xl transform scale-95 transition-transform duration-300">
+                <!-- Hero imagen modal -->
+                <div class="relative h-52 overflow-hidden rounded-t-2xl">
+                    <img src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&w=900&q=80"
+                        alt="Rover VIPER" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent">
+                    </div>
+                    <button onclick="closeMissionModal('viper')"
+                        class="absolute top-4 right-4 w-9 h-9 bg-slate-800/80 backdrop-blur rounded-full flex items-center justify-center text-slate-300 hover:text-white hover:bg-slate-700 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <div class="absolute bottom-4 left-6">
+                        <span
+                            class="text-[10px] font-bold uppercase tracking-widest text-teal-300 bg-teal-900/70 backdrop-blur border border-teal-700/40 px-2.5 py-1 rounded-full">NASA
+                            · Polo Sur Lunar</span>
+                        <h2 class="text-3xl font-extrabold text-white mt-2">Rover VIPER</h2>
+                    </div>
+                </div>
+
+                <!-- Cuerpo modal -->
+                <div class="p-6 space-y-6">
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-3">
+                        <div class="bg-slate-800/60 rounded-xl p-3 text-center border border-slate-700/50">
+                            <p class="text-[10px] text-slate-500 uppercase tracking-wide">Tipo</p>
+                            <p class="text-sm font-bold text-white mt-1">Rover Lunar</p>
+                        </div>
+                        <div class="bg-slate-800/60 rounded-xl p-3 text-center border border-slate-700/50">
+                            <p class="text-[10px] text-slate-500 uppercase tracking-wide">Destino</p>
+                            <p class="text-sm font-bold text-teal-400 mt-1">Polo Sur</p>
+                        </div>
+                        <div class="bg-slate-800/60 rounded-xl p-3 text-center border border-slate-700/50">
+                            <p class="text-[10px] text-slate-500 uppercase tracking-wide">Duración</p>
+                            <p class="text-sm font-bold text-white mt-1">~100 días</p>
+                        </div>
+                    </div>
+
+                    <!-- Descripción -->
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">¿Qué es el
+                            Rover VIPER?</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            VIPER (Volatiles Investigating Polar Exploration Rover) es un rover de la NASA
+                            diseñado para explorar el inhóspito polo sur de la Luna en busca de hielo de agua y
+                            otros volátiles. Será el primer rover americano en la Luna desde el Apollo 17 y uno
+                            de los más sofisticados jamás construidos para operación autónoma en terrenos de
+                            oscuridad permanente.
+                        </p>
+                    </div>
+
+                    <!-- Objetivos -->
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">🎯 Objetivos
+                            Principales</h3>
+                        <ul class="space-y-2">
+                            <li class="flex gap-3 text-sm text-slate-300"><span
+                                    class="text-teal-500 shrink-0 mt-0.5">▸</span>Cartografiar la distribución
+                                exacta de hielo de agua en el subsuelo.</li>
+                            <li class="flex gap-3 text-sm text-slate-300"><span
+                                    class="text-teal-500 shrink-0 mt-0.5">▸</span>Identificar la concentración y
+                                accesibilidad de recursos volátiles.</li>
+                            <li class="flex gap-3 text-sm text-slate-300"><span
+                                    class="text-teal-500 shrink-0 mt-0.5">▸</span>Evaluar si el agua puede
+                                extraerse para producir combustible y oxígeno respirable.</li>
+                            <li class="flex gap-3 text-sm text-slate-300"><span
+                                    class="text-teal-500 shrink-0 mt-0.5">▸</span>Proporcionar datos para elegir
+                                el sitio de alunizaje de los astronautas Artemis.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Tecnología -->
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">⚙️ Tecnología
+                            Clave</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <div
+                                class="bg-slate-800/40 rounded-lg p-3 border border-slate-700/40 text-sm text-slate-300">
+                                🔩 Taladro TRIDENT: perfora hasta 1 m bajo la superficie</div>
+                            <div
+                                class="bg-slate-800/40 rounded-lg p-3 border border-slate-700/40 text-sm text-slate-300">
+                                🔬 Espectrómetro NSS de neutrones y MSolo de masa</div>
+                            <div
+                                class="bg-slate-800/40 rounded-lg p-3 border border-slate-700/40 text-sm text-slate-300">
+                                🌑 Navegación autónoma en regiones de sombra permanente</div>
+                            <div
+                                class="bg-slate-800/40 rounded-lg p-3 border border-slate-700/40 text-sm text-slate-300">
+                                ☀️ Paneles solares orientables y batería de respaldo</div>
+                        </div>
+                    </div>
+
+                    <!-- Video -->
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">🎬 Video NASA
+                            Oficial</h3>
+                        <div class="rounded-xl overflow-hidden aspect-video bg-slate-800">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/46AxqHONHEE"
+                                title="Rover VIPER NASA" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Artemis connection -->
+                    <div
+                        class="rounded-xl bg-gradient-to-br from-teal-900/30 to-emerald-900/20 border border-teal-800/40 p-5">
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">🚀 Conexión
+                            con Artemis</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Si VIPER confirma reservas accesibles de hielo de agua, la NASA podrá planificar una
+                            base lunar permanente. El agua puede electrolizarse para producir H₂ y O₂
+                            —combustible de cohetes y oxígeno respirable— convirtiendo la Luna en un punto de
+                            reabastecimiento para misiones tripuladas hacia Marte y más allá.
+                        </p>
+                    </div>
+
+                    <!-- CTA monetización -->
+                    <a href="https://onuxia.xyz/" target="_blank" rel="noopener"
+                        class="flex items-center justify-center gap-3 w-full bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-400 hover:to-blue-500 text-white font-bold px-6 py-4 rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-teal-500/25 hover:scale-[1.02]">
+                        <span class="text-xl">🚀</span>
+                        <span>Aprende más sobre tecnología e IA aplicada</span>
+                        <svg class="w-5 h-5 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+
+            </main>
+
+            <!-- Stats fila -->
+            <div class="grid grid-cols-3 divide-x divide-slate-700/50 border-b border-slate-700/50">
+                <div class="py-3 px-4 text-center">
+                    <p class="text-xs text-slate-500 uppercase tracking-wide">Tipo</p>
+                    <p class="text-sm font-bold text-white mt-0.5">Rover Lunar</p>
+                </div>
+                <div class="py-3 px-4 text-center">
+                    <p class="text-xs text-slate-500 uppercase tracking-wide">Destino</p>
+                    <p class="text-sm font-bold text-teal-400 mt-0.5">Polo Sur</p>
+                </div>
+                <div class="py-3 px-4 text-center">
+                    <p class="text-xs text-slate-500 uppercase tracking-wide">Misión</p>
+                    <p class="text-sm font-bold text-white mt-0.5">100 días</p>
+                </div>
+            </div>
+
+            <!-- Descripción visible -->
+            <div class="p-7 flex flex-col flex-grow">
+                <p class="text-slate-400 text-sm leading-relaxed line-clamp-3">
+                    VIPER (Volatiles Investigating Polar Exploration Rover) es un rover de la NASA diseñado para
+                    explorar el
+                    polo sur lunar y mapear depósitos de agua helada. Su hallazgo podría cambiar radicalmente la
+                    viabilidad
+                    de las misiones tripuladas de larga duración.
+                </p>
+
+                <!-- Panel expandible -->
+                <div id="viper-details" class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                    <div class="mt-5 space-y-5 border-t border-slate-700/50 pt-5">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">🎯 Objetivos
+                                Principales</h4>
+                            <ul class="text-slate-400 text-sm space-y-1.5">
+                                <li class="flex gap-2"><span class="text-teal-500 mt-0.5">▸</span>Cartografiar la
+                                    distribución de hielo de agua en el subsuelo lunar.</li>
+                                <li class="flex gap-2"><span class="text-teal-500 mt-0.5">▸</span>Identificar las
+                                    regiones
+                                    más ricas en recursos volátiles.</li>
+                                <li class="flex gap-2"><span class="text-teal-500 mt-0.5">▸</span>Evaluar la viabilidad
+                                    de
+                                    extraer agua para consumo y producción de combustible.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">⚙️ Tecnología
+                                Clave
+                            </h4>
+                            <ul class="text-slate-400 text-sm space-y-1.5">
+                                <li class="flex gap-2"><span class="text-teal-500 mt-0.5">▸</span>Taladro TRIDENT capaz
+                                    de
+                                    perforar hasta 1 metro bajo la superficie.</li>
+                                <li class="flex gap-2"><span class="text-teal-500 mt-0.5">▸</span>Espectrometros de
+                                    neutrones y masa para análisis de composición.</li>
+                                <li class="flex gap-2"><span class="text-teal-500 mt-0.5">▸</span>Sistema de navegación
+                                    autónoma para terrenos de sombra permanente.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">🚀 Importancia
+                                para
+                                Artemis</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Si VIPER confirma reservas accesibles de hielo de agua, esta podría electrolizarse para
+                                producir oxígeno e hidrógeno —propelentes para cohetes y oxígeno respirable. Esto
+                                convertiría la Luna en un punto de reabastecimiento para misiones más allá, incluyendo
+                                Marte.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botón expandir -->
+                <button onclick="toggleMission('viper')" id="viper-btn"
+                    class="mt-5 self-start inline-flex items-center gap-2 text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors group">
+                    <span id="viper-btn-text">Ver más detalles</span>
+                    <svg id="viper-chevron" class="w-4 h-4 transition-transform duration-300" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+            </div>
+            </article>
+
+        </div>
+        </section>
+    </div>
+
+    </main>
+
+    <!-- Footer Original -->
+    <footer class="bg-white border-t border-slate-200 mt-24">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-center md:text-left">
+                    <a href="index.html"
+                        class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-blue-600">
+                        IA Insights.
+                    </a>
+                    <p class="text-sm text-slate-500 mt-2 font-medium">Explorando y decodificando el futuro de la
+                        tecnología.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://x.com/NicolaRosse" target="_blank" rel="noopener noreferrer"
+                        class="text-slate-400 hover:text-brand-500 hover:scale-110 transition-all duration-300 transform">
+                        <span class="sr-only">X (Twitter)</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div
+                class="mt-8 border-t border-slate-100 pt-8 text-center flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-slate-400">&copy; 2026 IA Insights Blog y NASA Open Data. Todos los derechos
+                    reservados.</p>
+                <div class="mt-4 md:mt-0 flex space-x-6 text-sm text-slate-500">
+                    <a href="terminos.html" class="hover:text-brand-500 transition-colors">Términos y
+                        Condiciones</a>
+                    <a href="privacidad.html" class="hover:text-brand-500 transition-colors">Política de
+                        Privacidad</a>
+                    <a href="cookies.html" class="hover:text-brand-500 transition-colors">Política de Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante auxiliar para Artemis (Siempre activo abajo) -->
+    <button
+        class="open-artemis-btn fixed bottom-6 right-6 z-40 bg-gradient-to-r from-blue-700 to-indigo-900 text-white rounded-full p-4 shadow-xl hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300 group flex items-center justify-center border border-blue-500/30">
+        <span class="text-2xl group-hover:-translate-y-1 transition-transform">🌕</span>
+        <span
+            class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out whitespace-nowrap opacity-0 group-hover:opacity-100 ml-0 group-hover:ml-3 font-semibold text-sm">
+            Misión Artemis
+        </span>
+    </button>
+
+    <!-- Modal Artemis -->
+    <div id="artemis-modal"
+        class="fixed inset-0 z-[120] bg-black/90 backdrop-blur-md hidden items-center justify-center opacity-0 transition-opacity duration-300">
+        <div class="bg-space-900 border border-blue-900/50 rounded-3xl w-full max-w-4xl max-h-[90vh] overflow-y-auto m-4 shadow-[0_0_50px_rgba(0,0,0,0.8)] text-slate-100 transform scale-95 transition-transform duration-300 relative scroll-smooth focus:outline-none"
+            tabindex="-1">
+
+            <!-- Botón Cerrar -->
+            <button id="close-artemis-btn"
+                class="absolute top-5 right-5 text-slate-400 hover:text-white bg-space-800 hover:bg-slate-700 rounded-full p-2 transition-colors z-20 shadow-lg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+
+            <!-- Cabecera del Modal -->
+            <div class="relative h-56 sm:h-72 rounded-t-3xl overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?auto=format&fit=crop&q=80&w=1200"
+                    alt="Espacio" class="w-full h-full object-cover opacity-50">
+                <div class="absolute inset-0 bg-gradient-to-t from-space-900 via-space-900/80 to-transparent"></div>
+                <div class="absolute bottom-8 left-6 md:left-10">
+                    <span
+                        class="px-3 py-1 bg-blue-600/80 text-xs font-bold uppercase tracking-wider rounded-full shadow-sm text-white border border-blue-400/30 mb-3 inline-block">Artículo
+                        Dedicado</span>
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight drop-shadow-lg">
+                        El
+                        Programa Artemis</h2>
+                </div>
+            </div>
+
+            <!-- Contenido del Modal -->
+            <div class="p-6 md:p-10 space-y-12 text-left">
+
+                <section>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4 text-blue-400 flex items-center gap-3">
+                        <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        Un salto para el futuro
+                    </h3>
+                    <p class="text-slate-300 leading-relaxed text-lg mb-4 font-light">
+                        Artemis es el programa internacional de vuelo espacial tripulado liderado por la NASA. Su
+                        objetivo principal es volver a llevar humanos a la Luna y establecer una presencia humana
+                        sostenible en su superficie y órbita.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed font-light">
+                        Este programa servirá como escalón tecnológico y logístico fundamental para la posterior
+                        misión
+                        tripulada hacia Marte.
+                    </p>
+                </section>
+
+                <section class="bg-space-800/60 rounded-3xl p-6 md:p-8 border border-slate-700/50 shadow-inner">
+                    <h3 class="text-xl font-bold mb-5 text-blue-300 flex items-center">
+                        <svg class="w-6 h-6 mr-3 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                            </path>
+                        </svg>
+                        NASA Open API: Imagen Astronómica
+                    </h3>
+
+                    <div id="nasa-api-container" class="animate-pulse flex flex-col items-center w-full">
+                        <div class="w-full h-64 md:h-96 bg-space-700/50 rounded-2xl mb-4"></div>
+                        <div class="h-6 bg-space-700/50 w-3/4 rounded mb-4"></div>
+                        <div class="h-4 bg-space-700/50 w-full rounded mb-2"></div>
+                        <div class="h-4 bg-space-700/50 w-5/6 rounded"></div>
+                    </div>
+
+                    <div id="nasa-api-content" class="hidden">
+                        <div
+                            class="w-full aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden mb-6 bg-black border border-slate-600 relative group shadow-2xl">
+                            <img id="nasa-image" src="" alt="Cargando imagen de la NASA..."
+                                class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-1000">
+                        </div>
+                        <h4 id="nasa-title" class="font-bold text-2xl md:text-3xl text-white mb-3 tracking-tight">
+                        </h4>
+                        <p id="nasa-desc"
+                            class="text-base text-slate-400 line-clamp-3 hover:line-clamp-none transition-all cursor-pointer leading-relaxed">
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-blue-400 flex items-center gap-3">
+                        <svg class="w-6 h-6 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                        </svg>
+                        Demostración: Lanzamiento Artemis I
+                    </h3>
+                    <div
+                        class="aspect-video w-full rounded-3xl overflow-hidden border border-slate-700 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/watch?v=_eeZQw9PBc0"
+                            title="NASA Artemis I Launch" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </section>
+
+                <section class="border-t border-slate-800 pt-8">
+                    <h3 class="text-xl font-bold mb-5 text-slate-200">Referencias Oficiales</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="https://www.nasa.gov/specials/artemis/" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center text-blue-400 hover:text-blue-300 hover:underline transition-all p-3 rounded-lg hover:bg-space-800 -ml-3">
+                                <svg class="w-5 h-5 mr-3 text-slate-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1">
+                                    </path>
+                                </svg>
+                                NASA: Portal del Programa Artemis
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://api.nasa.gov/" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center text-blue-400 hover:text-blue-300 hover:underline transition-all p-3 rounded-lg hover:bg-space-800 -ml-3">
+                                <svg class="w-5 h-5 mr-3 text-slate-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                </svg>
+                                Documentación de la API de NASA
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- Scripts de interactividad -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteligencia Artificial | Insights</title>
+    <meta name="description"
+        content="Descubre el fascinante mundo de la Inteligencia Artificial: conceptos, aplicaciones y recursos para aprender.">
+
+    <!-- Fuentes modernas: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS (usando CDN para modernidad y diseño ágil) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            500: '#14b8a6', // Teal
+                            600: '#0d9488',
+                            900: '#134e4a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body
+    class="bg-slate-50 text-slate-900 antialiased flex flex-col min-h-screen selection:bg-teal-200 selection:text-teal-900">
+
+    <!-- Menú de Navegación -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/70 backdrop-blur-md border-b border-transparent"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-black tracking-tight"
+                        style="background: linear-gradient(to right, #14b8a6, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                        IA Insights.
+                    </a>
+                </div>
+                <!-- Menú Desktop -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#introduccion"
+                        class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Introducción</a>
+                    <a href="#aplicaciones"
+                        class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Aplicaciones</a>
+                    <a href="#aprende-mas"
+                        class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Aprende
+                        más</a>
+                    <a href="#otras-paginas"
+                        class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Otras
+                        páginas</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="flex-grow pt-28 pb-20 bg-white">
+        <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-8">
+                <a href="index.html"
+                    class="inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-800 transition-colors mb-6 bg-brand-50 px-4 py-2 rounded-full">
+                    <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Volver al inicio
+                </a>
+                <br>
+                <span
+                    class="px-3 py-1 bg-brand-500 text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-sm">Introducción</span>
+                <h1
+                    class="text-4xl md:text-5xl lg:text-6xl font-extrabold mt-6 text-slate-900 tracking-tight leading-tight">
+                    El Despertar de la IA Generativa</h1>
+            </div>
+            <div class="w-full aspect-[21/9] rounded-3xl overflow-hidden shadow-2xl mb-14 relative group">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10 opacity-60"></div>
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800"
+                    alt="El Despertar de la IA Generativa"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-in-out">
+            </div>
+            <div
+                class="prose prose-lg prose-slate max-w-3xl mx-auto text-slate-700 leading-relaxed font-sans pb-10 border-b border-slate-100">
+
+                <p class="mb-4 text-xl font-light text-slate-500">
+                    La inteligencia artificial generativa ha dejado de ser una promesa futurista para convertirse en una
+                    de las tecnologías más disruptivas de nuestro tiempo. En pocos años, ha pasado de experimentos
+                    académicos a herramientas capaces de transformar industrias completas.
+                </p>
+
+                <p class="mb-4">
+                    Modelos avanzados como GPT y sistemas de generación de imágenes han demostrado una capacidad
+                    sorprendente para crear contenido con una calidad que, en muchos casos, rivaliza con el trabajo
+                    humano.
+                </p>
+
+                <!-- IMAGEN -->
+                <img src="https://images.unsplash.com/photo-1677442135136-760c813028c0"
+                    alt="Inteligencia artificial generativa" class="w-full rounded-xl my-6 shadow-lg">
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-slate-800">
+                    ¿Cómo funciona la IA generativa?
+                </h2>
+
+                <p class="mb-4">
+                    En esencia, estos sistemas están basados en redes neuronales profundas entrenadas con enormes
+                    volúmenes de datos. Su objetivo es predecir el siguiente elemento en una secuencia: una palabra, un
+                    píxel o incluso una línea de código.
+                </p>
+
+                <p class="mb-4">
+                    Gracias a este proceso, la IA aprende patrones complejos del lenguaje, la imagen y la estructura
+                    lógica, permitiéndole generar resultados coherentes y sorprendentemente creativos.
+                </p>
+
+                <!-- IMAGEN -->
+                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485" alt="Red neuronal artificial"
+                    class="w-full rounded-xl my-6 shadow-lg">
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-slate-800">
+                    Impacto en el mundo real
+                </h2>
+
+                <p class="mb-4">
+                    El impacto de la IA generativa ya se siente en múltiples sectores. Desde la creación de contenido
+                    digital hasta la programación, el diseño gráfico, el marketing y la educación, estas herramientas
+                    están redefiniendo la forma en que trabajamos.
+                </p>
+
+                <p class="mb-4">
+                    Empresas y emprendedores están utilizando la IA para automatizar tareas, reducir costos y aumentar
+                    la productividad a niveles nunca antes vistos.
+                </p>
+
+                <!-- IMAGEN -->
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
+                    alt="Impacto de la inteligencia artificial" class="w-full rounded-xl my-6 shadow-lg">
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-slate-800">
+                    ¿Reemplazo o evolución?
+                </h2>
+
+                <p class="mb-4">
+                    Uno de los debates más importantes es si la IA reemplazará a los humanos. La realidad es más
+                    compleja: no se trata de reemplazo, sino de transformación.
+                </p>
+
+                <p class="mb-4">
+                    Las personas que aprendan a utilizar estas herramientas tendrán una ventaja competitiva enorme
+                    frente a quienes no lo hagan. La IA no elimina trabajos, pero sí cambia las reglas del juego.
+                </p>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-slate-800">
+                    El futuro que se aproxima
+                </h2>
+
+                <p class="mb-4">
+                    A medida que la tecnología avanza, veremos sistemas cada vez más autónomos, capaces de realizar
+                    tareas complejas con mínima intervención humana. Esto abrirá nuevas oportunidades, pero también
+                    nuevos desafíos.
+                </p>
+
+                <p class="mb-4">
+                    El verdadero poder de la IA generativa no está solo en lo que puede hacer, sino en cómo las personas
+                    la utilizan para crear, innovar y construir el futuro.
+                </p>
+
+                <!-- IMAGEN FINAL -->
+                <img src="https://images.unsplash.com/photo-1581090700227-1e8e9b2a8a4c"
+                    alt="Futuro de la inteligencia artificial" class="w-full rounded-xl my-6 shadow-lg">
+
+                <!-- CTA FINAL -->
+                <div
+                    class="mt-12 p-8 rounded-2xl bg-gradient-to-r from-teal-500 to-blue-600 text-white text-center shadow-xl">
+
+                    <h3 class="text-2xl font-bold mb-3">
+                        🚀 Lleva esto al siguiente nivel
+                    </h3>
+
+                    <p class="mb-6 text-lg opacity-90">
+                        Aprende cómo aprovechar la inteligencia artificial generativa para crear ingresos reales y
+                        destacar en el mercado.
+                    </p>
+
+                    <a href="https://onuxia.xyz/" target="_blank"
+                        class="inline-block bg-white text-slate-900 font-bold px-8 py-4 rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+                        Quiero aprender ahora 💰
+                    </a>
+
+                </div>
+                </p>
+            </div>
+        </article>
+    </main>
+    <!-- Fin del contenido principal -->
+
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-24">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-center md:text-left">
+                    <a href="index.html"
+                        class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-blue-600">
+                        IA Insights.
+                    </a>
+                    <p class="text-sm text-slate-500 mt-2 font-medium">Explorando y decodificando el futuro de la
+                        tecnología.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://x.com/NicolaRosse" target="_blank" rel="noopener noreferrer"
+                        class="text-slate-400 hover:text-brand-500 hover:scale-110 transition-all duration-300 transform">
+                        <span class="sr-only">X (Twitter)</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors">
+                        <span class="sr-only">GitHub</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div
+                class="mt-8 border-t border-slate-100 pt-8 text-center flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-slate-400">
+                    &copy; 2026 IA Insights Blog. Todos los derechos reservados.
+                </p>
+                <div class="mt-4 md:mt-0 flex space-x-6 text-sm text-slate-500">
+                    <a href="terminos.html" class="hover:text-brand-500 transition-colors">Términos y Condiciones</a>
+                    <a href="privacidad.html" class="hover:text-brand-500 transition-colors">Política de Privacidad</a>
+                    <a href="cookies.html" class="hover:text-brand-500 transition-colors">Política de Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts de interactividad -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteligencia Artificial | Insights</title>
+    <meta name="description"
+        content="Descubre el fascinante mundo de la Inteligencia Artificial: conceptos, aplicaciones y recursos para aprender.">
+
+    <!-- Fuentes modernas: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS (usando CDN para modernidad y diseño ágil) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            500: '#14b8a6', // Teal
+                            600: '#0d9488',
+                            900: '#134e4a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body
+    class="bg-slate-50 text-slate-900 antialiased flex flex-col min-h-screen selection:bg-teal-200 selection:text-teal-900">
+
+    <!-- Menú de Navegación -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/70 backdrop-blur-md border-b border-transparent"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-black tracking-tight"
+                        style="background: linear-gradient(to right, #14b8a6, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                        IA Insights.
+                    </a>
+                </div>
+                <!-- Menú Desktop -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#introduccion"
+                        class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Introducción</a>
+                    <a href="#aplicaciones"
+                        class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Aplicaciones</a>
+                    <a href="#aprende-mas"
+                        class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Aprende
+                        más</a>
+                    <a href="#otras-paginas"
+                        class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Otras
+                        páginas</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="flex-grow pt-28 pb-20 bg-white">
+        <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-8">
+                <a href="index.html"
+                    class="inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-800 transition-colors mb-6 bg-brand-50 px-4 py-2 rounded-full">
+                    <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Volver al inicio
+                </a>
+                <br>
+                <span
+                    class="px-3 py-1 bg-brand-500 text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-sm">Aprende
+                    más</span>
+                <h1
+                    class="text-4xl md:text-5xl lg:text-6xl font-extrabold mt-6 text-slate-900 tracking-tight leading-tight">
+                    El Peligro de los Sesgos en la IA</h1>
+            </div>
+            <div class="w-full aspect-[21/9] rounded-3xl overflow-hidden shadow-2xl mb-14 relative group">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10 opacity-60"></div>
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
+                    alt="El Peligro de los Sesgos en la IA"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-in-out">
+            </div>
+            <div
+                class="prose prose-lg prose-slate max-w-3xl mx-auto text-slate-700 leading-relaxed font-sans pb-10 border-b border-slate-100">
+
+                <p class="mb-4 text-xl font-light text-slate-500">
+                    Un sistema de inteligencia artificial no es completamente objetivo. En esencia, es un reflejo de los
+                    datos con los que ha sido entrenado. Si esos datos contienen prejuicios históricos, culturales o
+                    sociales, el modelo inevitablemente los replicará, amplificándolos en muchos casos.
+                </p>
+
+                <p class="mb-4">
+                    Lejos de ser una falla puntual, el sesgo en la IA es una consecuencia directa de cómo se construyen
+                    estos sistemas. Los algoritmos aprenden patrones, y esos patrones provienen de la realidad humana,
+                    con todas sus imperfecciones.
+                </p>
+
+                <!-- IMAGEN -->
+                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c"
+                    alt="Sesgos en inteligencia artificial" class="w-full rounded-xl my-6">
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-slate-800">¿De dónde provienen los sesgos?</h2>
+
+                <p class="mb-4">
+                    Gran parte de los datos utilizados para entrenar modelos proviene de Internet: artículos, foros,
+                    libros y registros históricos acumulados durante décadas e incluso siglos. Esto significa que muchos
+                    sistemas heredan visiones del mundo que pueden estar desactualizadas o influenciadas por contextos
+                    sociales pasados.
+                </p>
+
+                <p class="mb-4">
+                    Si estos conjuntos de datos no son cuidadosamente filtrados y equilibrados, los modelos pueden
+                    generar respuestas o decisiones que refuercen estereotipos, discriminación o desigualdades
+                    existentes.
+                </p>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-slate-800">La responsabilidad de la ética de datos</h2>
+
+                <p class="mb-4">
+                    El desarrollo de inteligencia artificial no es solo un desafío técnico, sino también ético. Las
+                    empresas y equipos de investigación tienen la responsabilidad de diseñar sistemas que sean justos,
+                    inclusivos y representativos de la diversidad global.
+                </p>
+
+                <p class="mb-4">
+                    Esto implica implementar procesos rigurosos de curación de datos, auditorías constantes de los
+                    modelos y la participación de equipos multidisciplinarios que incluyan expertos en ética, sociología
+                    y derecho.
+                </p>
+
+                <p class="mb-4">
+                    Además, se están desarrollando nuevas técnicas para detectar y reducir sesgos, como el entrenamiento
+                    con datos balanceados, evaluaciones de equidad y ajustes en los algoritmos para evitar resultados
+                    discriminatorios.
+                </p>
+
+                <!-- IMAGEN -->
+                <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd"
+                    alt="Ética en inteligencia artificial" class="w-full rounded-xl my-6">
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-slate-800">Impacto en la vida real</h2>
+
+                <p class="mb-4">
+                    El sesgo en la IA no es solo un problema teórico. Puede afectar decisiones reales en áreas como
+                    contratación laboral, sistemas financieros, atención médica y justicia. Un modelo mal entrenado
+                    puede perpetuar desigualdades a gran escala si no se supervisa adecuadamente.
+                </p>
+
+                <p class="mb-4">
+                    Por ello, garantizar la transparencia y la equidad en estos sistemas es fundamental para construir
+                    confianza en la tecnología.
+                </p>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-slate-800">Hacia una IA más justa</h2>
+
+                <p class="mb-4">
+                    El futuro de la inteligencia artificial dependerá no solo de su capacidad técnica, sino de su
+                    alineación con valores humanos. La creación de sistemas más justos y responsables será uno de los
+                    mayores desafíos de esta década.
+                </p>
+
+                <p class="mb-4">
+                    Comprender los sesgos es el primer paso para mitigarlos. Solo así podremos aprovechar el potencial
+                    de la IA sin reproducir los errores del pasado.
+                </p>
+
+            </div>
+            <div
+                class="mt-12 p-8 rounded-2xl bg-gradient-to-r from-teal-500 to-blue-600 text-white text-center shadow-xl">
+
+                <h3 class="text-2xl font-bold mb-3">
+                    ⚠️ Aprende a usar la IA correctamente (y sin errores)
+                </h3>
+
+                <p class="mb-6 text-lg opacity-90">
+                    Descubre cómo aprovechar la inteligencia artificial de forma inteligente, ética y rentable sin caer
+                    en errores comunes.
+                </p>
+
+                <a href="https://onuxia.xyz/" target="_blank"
+                    class="inline-block bg-white text-slate-900 font-bold px-8 py-4 rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+                    Ver guía completa 🚀
+                </a>
+
+            </div>
+        </article>
+    </main>
+    <!-- Fin del contenido principal -->
+
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-24">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-center md:text-left">
+                    <a href="index.html"
+                        class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-blue-600">
+                        IA Insights.
+                    </a>
+                    <p class="text-sm text-slate-500 mt-2 font-medium">Explorando y decodificando el futuro de la
+                        tecnología.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://x.com/NicolaRosse" target="_blank" rel="noopener noreferrer"
+                        class="text-slate-400 hover:text-brand-500 hover:scale-110 transition-all duration-300 transform">
+                        <span class="sr-only">X (Twitter)</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors">
+                        <span class="sr-only">GitHub</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div
+                class="mt-8 border-t border-slate-100 pt-8 text-center flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-slate-400">
+                    &copy; 2026 IA Insights Blog. Todos los derechos reservados.
+                </p>
+                <div class="mt-4 md:mt-0 flex space-x-6 text-sm text-slate-500">
+                    <a href="terminos.html" class="hover:text-brand-500 transition-colors">Términos y Condiciones</a>
+                    <a href="privacidad.html" class="hover:text-brand-500 transition-colors">Política de Privacidad</a>
+                    <a href="cookies.html" class="hover:text-brand-500 transition-colors">Política de Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts de interactividad -->
+    <script src="script.js"></script>
+</body>
+
+</html>
