@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Peligro de los Sesgos en la IA: Qué Son y Cómo Evitarlos (2026) — Onux.IA</title>
+  <meta name="description"
+    content="Qué son los sesgos algorítmicos en la inteligencia artificial, de dónde provienen, ejemplos reales de discriminación por IA y qué hace la industria para construir sistemas más justos y equitativos.">
+  <meta name="keywords"
+    content="sesgos inteligencia artificial, sesgo algorítmico, ética IA, discriminación IA, bias machine learning, IA justa">
+  <meta name="author" content="Onux.IA">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://Onux.IA.xyz/articulo6-sesgos.html">
+  <link rel="icon" href="/favicon.png" type="image/png">
+
+  <meta property="og:title" content="El Peligro de los Sesgos en la IA: Qué Son y Cómo Evitarlos — Onux.IA">
+  <meta property="og:description"
+    content="Los sistemas de IA pueden discriminar si no se diseñan con cuidado. Sesgos algorítmicos: ejemplos reales y cómo la industria está respondiendo.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://Onux.IA.xyz/articulo6-sesgos.html">
+  <meta property="article:published_time" content="2026-03-10">
+  <meta property="article:modified_time" content="2026-04-21">
+  <meta property="article:section" content="Ética IA">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3404580755827598"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="estilos.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "El Peligro de los Sesgos en la IA: Qué Son y Cómo Evitarlos",
+    "description": "Sesgos algorítmicos en la inteligencia artificial: origen, ejemplos reales de discriminación y cómo construir sistemas más justos.",
+    "url": "https://Onux.IA.xyz/articulo6-sesgos.html",
+    "datePublished": "2026-03-10",
+    "dateModified": "2026-04-21",
+    "inLanguage": "es",
+    "author": { "@type": "Organization", "name": "Onux.IA" },
+    "publisher": { "@type": "Organization", "name": "Onux.IA", "url": "https://Onux.IA.xyz/" },
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200",
+    "articleSection": "Ética IA",
+    "keywords": ["sesgos IA", "sesgo algorítmico", "ética inteligencia artificial", "bias machine learning"]
+  }
+  </script>
+
+  <style>
+    body { padding-top: 68px; }
+    .article-hero { background: linear-gradient(180deg,#fff7ed 0%,#f8fafc 100%); border-bottom:1px solid #e2e8f0; padding:3rem 0 0; }
+    .article-hero__inner { max-width:800px; margin:0 auto; padding:0 1.25rem 2.5rem; }
+    @media (min-width:768px){ .article-hero__inner { padding:0 2rem 2.5rem; } }
+    .article-hero__image { width:100%; aspect-ratio:16/7; object-fit:cover; border-radius:0 0 20px 20px; box-shadow:0 20px 60px -12px rgba(15,23,42,.15); display:block; max-width:900px; margin:0 auto; }
+    .article-layout { padding:3rem 0 4rem; }
+    .article-inner { max-width:800px; margin:0 auto; padding:0 1.25rem; }
+    @media (min-width:768px){ .article-inner { padding:0 2rem; } }
+    .warning-box { background:linear-gradient(135deg,#fff7ed,#fef2f2); border:1px solid rgba(239,68,68,.25); border-radius:14px; padding:1.5rem; margin:1.75rem 0; }
+    .warning-box__title { font-size:.8rem; font-weight:700; color:#dc2626; text-transform:uppercase; letter-spacing:.07em; margin-bottom:.5rem; }
+    .related-articles { background:#f8fafc; border-radius:20px; padding:2rem; margin-top:3rem; }
+    .related-articles h3 { font-size:1.1rem; font-weight:800; color:#0f172a; margin-bottom:1.25rem; }
+    .related-list { display:flex; flex-direction:column; gap:.875rem; }
+    .related-item { display:flex; gap:1rem; align-items:center; padding:.875rem; background:white; border-radius:12px; border:1px solid #e2e8f0; text-decoration:none; transition:all .25s ease; }
+    .related-item:hover { border-color:#14b8a6; transform:translateX(4px); }
+    .related-item__emoji { font-size:1.5rem; flex-shrink:0; }
+    .related-item__title { font-size:.9rem; font-weight:600; color:#1e293b; }
+    .related-item__cat { font-size:.75rem; color:#64748b; }
+  </style>
+</head>
+
+<body>
+  <nav id="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand"><span class="nav-brand-icon">⬡</span> Onux.IA</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="index.html#ia-generativa" class="nav-link">IA Generativa</a>
+        <a href="index.html#herramientas" class="nav-link">Herramientas</a>
+        <a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a>
+        <a href="contacto.html" class="nav-cta">Contacto</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="mobile-menu">
+      <a href="index.html" class="nav-mobile-link">🏠 Inicio</a>
+      <a href="blog.html" class="nav-mobile-link">📰 Blog</a>
+      <a href="index.html#ia-generativa" class="nav-mobile-link">🤖 IA Generativa</a>
+      <a href="index.html#herramientas" class="nav-mobile-link">🛠️ Herramientas</a>
+      <a href="sobre-nosotros.html" class="nav-mobile-link">👥 Sobre Nosotros</a>
+      <a href="contacto.html" class="nav-mobile-link">✉️ Contacto</a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <section class="article-hero">
+      <div class="article-hero__inner">
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <a href="index.html">Inicio</a>
+          <span class="breadcrumb__sep">›</span>
+          <a href="blog.html">Blog</a>
+          <span class="breadcrumb__sep">›</span>
+          <span>Ética IA</span>
+          <span class="breadcrumb__sep">›</span>
+          <span>Sesgos Algorítmicos</span>
+        </nav>
+        <span class="category-badge category-badge--intro">Ética IA</span>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.8rem);font-weight:900;color:#0f172a;letter-spacing:-0.03em;line-height:1.15;margin:1rem 0;">
+          El Peligro de los Sesgos en la IA: Qué Son, Ejemplos Reales y Cómo Evitarlos
+        </h1>
+        <div class="reading-meta">
+          <span>📅 10 de marzo de 2026</span>
+          <span>⏱️ 7 min de lectura</span>
+          <span>✍️ Equipo Onux.IA</span>
+          <span>🔄 Actualizado: Abril 2026</span>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200"
+        alt="Concepto visual de sesgos algorítmicos en sistemas de inteligencia artificial"
+        class="article-hero__image" loading="eager" width="1200" height="525">
+    </section>
+
+    <section class="article-layout">
+      <div class="article-inner">
+        <p class="article-lead">
+          Un sistema de inteligencia artificial no es completamente objetivo. Es un reflejo de los datos con los que ha sido entrenado. Si esos datos contienen prejuicios históricos, culturales o sociales, <strong>el modelo los replicará y amplificará</strong> —con consecuencias que van mucho más allá de un chat incómodo.
+        </p>
+
+        <div class="article-body">
+
+          <div class="ad-container" aria-label="Publicidad">
+            <p class="ad-label">Publicidad</p>
+            <ins class="adsbygoogle ad-wrapper" style="display:block" data-ad-client="ca-pub-3404580755827598"
+              data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+          </div>
+
+          <p>Lejos de ser una falla puntual, el sesgo en la IA es una consecuencia directa de cómo se construyen estos sistemas. Los algoritmos aprenden patrones, y esos patrones provienen de la realidad humana —con todas sus imperfecciones históricas y estructurales.</p>
+
+          <div class="warning-box">
+            <div class="warning-box__title">⚠️ Por qué esto importa en LATAM</div>
+            <p style="font-size:.9rem; color:#334155; line-height:1.7;">La mayoría de los datos de entrenamiento de los grandes modelos provienen de internet en inglés. Esto significa que los sesgos culturales anglosajones se amplifican, mientras que la diversidad cultural, lingüística y socioeconómica latinoamericana está subrepresentada. Los sistemas pueden funcionar significativamente peor para poblaciones latinas, afrodescendientes o indígenas.</p>
+          </div>
+
+          <h2>¿De Dónde Provienen los Sesgos en la IA?</h2>
+          <p>Los sesgos pueden entrar en un sistema de IA en múltiples puntos del proceso:</p>
+
+          <h3>1. Datos de entrenamiento históricos</h3>
+          <p>Si entrenas un modelo de contratación laboral con datos históricos de una empresa que históricamente contrató más hombres que mujeres para roles técnicos, el modelo aprenderá que los hombres son "mejores candidatos" para esos roles —no porque lo sean, sino porque así eran los datos.</p>
+          <p>Amazon descubrió este problema en 2018 en su sistema interno de selección de CVs y tuvo que descartarlo. El modelo penalizaba CVs que incluían la palabra "mujeres" (como "club de ajedrez de mujeres") porque había aprendido de datos históricos sesgados.</p>
+
+          <h3>2. Subrepresentación en los datos</h3>
+          <p>Los modelos de reconocimiento facial entrenados principalmente con rostros de piel clara tienen tasas de error mucho más altas en personas de piel oscura. Un estudio del MIT (2018) encontró tasas de error del 34.7% para mujeres de piel oscura versus 0.8% para hombres de piel clara en sistemas comerciales de reconocimiento facial.</p>
+
+          <h3>3. Sesgos del equipo humano</h3>
+          <p>Las decisiones sobre qué datos recopilar, cómo etiquetarlos y qué métricas optimizar reflejan las perspectivas (y los puntos ciegos) del equipo que construye el sistema. Sin diversidad de experiencias en ese equipo, los sesgos se cuelan silenciosamente.</p>
+
+          <h3>4. Amplificación de sesgos</h3>
+          <p>Los modelos pueden amplificar sesgos sutiles que existen en los datos. Si en los datos de entrenamiento los hombres aparecen ligeramente más asociados a "ciencias" que las mujeres, el modelo puede exagerar esta asociación y hacerla mucho más pronunciada en sus outputs.</p>
+
+          <div class="ad-container" aria-label="Publicidad">
+            <p class="ad-label">Publicidad</p>
+            <ins class="adsbygoogle ad-wrapper" style="display:block" data-ad-client="ca-pub-3404580755827598"
+              data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+          </div>
+
+          <h2>Impacto Real en Decisiones Críticas</h2>
+          <p>El sesgo en la IA no es solo un problema teórico. Afecta decisiones reales en áreas de alto impacto:</p>
+          <ul>
+            <li><strong>Justicia criminal:</strong> El sistema COMPAS (usado en EE. UU. para predecir reincidencia) fue encontrado con sesgo racial, clasificando a acusados negros como de "alto riesgo" con mayor frecuencia que acusados blancos con historial similar (ProPublica, 2016).</li>
+            <li><strong>Acceso a crédito:</strong> Modelos de scoring crediticio que penalizan códigos postales históricamente marginalizados perpetúan la exclusión financiera de comunidades vulnerables.</li>
+            <li><strong>Atención médica:</strong> Algoritmos de triaje hospitalario en EE. UU. asignaban menos recursos a pacientes negros que a pacientes blancos con condiciones de salud equivalentes.</li>
+            <li><strong>Publicidad digital:</strong> Algoritmos de Facebook mostraban anuncios de empleos mejor pagados significativamente más a hombres que a mujeres, incluso cuando los empleadores no especificaban preferencia de género.</li>
+          </ul>
+
+          <h2>¿Qué Hace la Industria al Respecto?</h2>
+          <p>La conciencia sobre el problema ha crecido enormemente y hay avances reales:</p>
+          <ul>
+            <li><strong>Auditorías algorítmicas:</strong> Empresas y reguladores están implementando auditorías obligatorias de sistemas de IA en sectores críticos.</li>
+            <li><strong>Técnicas de debiasing:</strong> Métodos matemáticos para detectar y reducir sesgos en los datos de entrenamiento y en los modelos resultantes.</li>
+            <li><strong>Diversidad en equipos de IA:</strong> Mayor conciencia de que la diversidad de perspectivas en los equipos que construyen IA es una herramienta de mitigación de sesgos.</li>
+            <li><strong>Regulación:</strong> La Ley de IA de la Unión Europea (EU AI Act) establece requisitos obligatorios de transparencia y evaluación de riesgos para sistemas de IA de alto riesgo.</li>
+          </ul>
+
+          <h2>Lo Que Puedes Hacer Como Usuario</h2>
+          <ol>
+            <li><strong>No confundas confianza con precisión:</strong> Los LLMs responden con confianza incluso cuando están equivocados o sesgados. Verifica información crítica con fuentes independientes.</li>
+            <li><strong>Diversifica las perspectivas:</strong> Si usas IA para tomar decisiones sobre personas, consulta múltiples fuentes y no delegues el juicio humano en situaciones de alto impacto.</li>
+            <li><strong>Reporta comportamientos sesgados:</strong> Todas las plataformas de IA tienen mecanismos de reporte. Úsalos cuando detectes outputs que parezcan discriminatorios.</li>
+            <li><strong>Infórmate:</strong> El conocimiento sobre cómo funcionan estos sistemas te protege de usarlos de forma acrítica.</li>
+          </ol>
+
+          <div class="info-box">
+            <div class="info-box__title">💡 El punto clave</div>
+            <p>El objetivo no es una IA "perfectamente objetiva" —eso no existe porque los datos siempre reflejan la realidad social que los generó. El objetivo es <strong>sistemas diseñados con conciencia de sus limitaciones</strong>, transparencia sobre sus sesgos conocidos y mecanismos de corrección cuando causan daño.</p>
+          </div>
+
+          <div class="article-cta">
+            <h3 style="font-size:1.3rem;font-weight:800;margin-bottom:.75rem;">¿Quieres aprender a usar la IA de forma crítica?</h3>
+            <p style="opacity:.9;margin-bottom:1.5rem;font-size:.95rem;">Lee nuestra guía completa de IA generativa para entender cómo funcionan estos sistemas y cuándo confiar en ellos.</p>
+            <a href="articulo1-ia-generativa.html" style="display:inline-flex;align-items:center;gap:.5rem;background:white;color:#0d9488;font-weight:700;padding:.875rem 1.75rem;border-radius:999px;text-decoration:none;" id="art6-cta-ia">
+              Entender la IA Generativa →
+            </a>
+          </div>
+
+        </div>
+
+        <div class="related-articles">
+          <h3>📚 Artículos relacionados</h3>
+          <div class="related-list">
+            <a href="articulo1-ia-generativa.html" class="related-item" id="rel-art6-ia">
+              <span class="related-item__emoji">✨</span>
+              <div>
+                <div class="related-item__title">El Despertar de la IA Generativa: Qué Es y Cómo Funciona</div>
+                <div class="related-item__cat">IA Generativa · 8 min de lectura</div>
+              </div>
+            </a>
+            <a href="articulo2-machine-learning.html" class="related-item" id="rel-art6-ml">
+              <span class="related-item__emoji">🧠</span>
+              <div>
+                <div class="related-item__title">Machine Learning: Qué Es, Cómo Funciona y Sus Aplicaciones</div>
+                <div class="related-item__cat">Machine Learning · 9 min de lectura</div>
+              </div>
+            </a>
+            <a href="mejores-herramientas-ia.html" class="related-item" id="rel-art6-tools">
+              <span class="related-item__emoji">🛠️</span>
+              <div>
+                <div class="related-item__title">Las 10 Mejores Herramientas de IA en 2026</div>
+                <div class="related-item__cat">Comparativa · 12 min de lectura</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-main" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand"><span>⬡</span> Onux.IA</a>
+          <p class="footer-tagline">Tu guía de inteligencia artificial y tecnología en español.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col__title">Blog</h4>
+          <ul class="footer-col__links">
+            <li><a href="blog.html" class="footer-link">Todos los artículos</a></li>
+            <li><a href="mejores-herramientas-ia.html" class="footer-link">Herramientas IA</a></li>
+            <li><a href="guia-chatgpt.html" class="footer-link">Guía ChatGPT</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col__title">Nosotros</h4>
+          <ul class="footer-col__links">
+            <li><a href="sobre-nosotros.html" class="footer-link">Sobre Onux.IA</a></li>
+            <li><a href="contacto.html" class="footer-link">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col__title">Legal</h4>
+          <ul class="footer-col__links">
+            <li><a href="privacidad.html" class="footer-link">Política de Privacidad</a></li>
+            <li><a href="cookies.html" class="footer-link">Política de Cookies</a></li>
+            <li><a href="terminos.html" class="footer-link">Términos y Condiciones</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Onux.IA. Todos los derechos reservados.</p>
+        <p class="footer-bottom__disclaimer">Este artículo tiene carácter informativo y divulgativo.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('nav-scrolled', window.scrollY > 20); });
+    const hamburger = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+  </script>
+</body>
+</html>

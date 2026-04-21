@@ -1,0 +1,509 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto — Onux.IA | IA y Tecnología en Español</title>
+  <meta name="description"
+    content="¿Tienes preguntas o sugerencias? Contacta con el equipo de Onux.IA. Respondemos todas las consultas sobre nuestro contenido de IA y tecnología.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://Onux.IA.xyz/contacto.html">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3404580755827598"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="estilos.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contacto — Onux.IA",
+    "url": "https://Onux.IA.xyz/contacto.html",
+    "description": "Página de contacto del equipo editorial de Onux.IA",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Onux.IA",
+      "url": "https://Onux.IA.xyz/"
+    }
+  }
+  </script>
+
+  <style>
+    body {
+      padding-top: 68px;
+    }
+
+    .page-hero {
+      padding: 4rem 0 3rem;
+      background: linear-gradient(180deg, #f0fdfa 0%, #f8fafc 100%);
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .page-hero__label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #0d9488;
+      background: #ccfbf1;
+      padding: 0.25rem 0.875rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+
+    .page-hero__title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      color: #0f172a;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+
+    .page-hero__subtitle {
+      font-size: 1.1rem;
+      color: #64748b;
+      max-width: 550px;
+      line-height: 1.7;
+    }
+
+    .contact-section {
+      padding: 4rem 0;
+    }
+
+    .contact-layout {
+      display: grid;
+      gap: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .contact-layout {
+        grid-template-columns: 1fr 380px;
+        align-items: start;
+      }
+    }
+
+    .contact-form-wrap {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 0 2px 12px -3px rgba(15, 23, 42, 0.08);
+    }
+
+    .form-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-subtitle {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-row {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    @media (min-width: 640px) {
+      .form-row {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .form-success h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-success p {
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    .form-success__icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Contact info */
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .info-card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+      transition: all 0.3s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(20, 184, 166, 0.1);
+      border-color: rgba(20, 184, 166, 0.25);
+    }
+
+    .info-card__icon {
+      font-size: 1.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .info-card__title {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 0.25rem;
+    }
+
+    .info-card__text {
+      font-size: 0.875rem;
+      color: #64748b;
+      line-height: 1.6;
+    }
+
+    .info-card__link {
+      color: #0d9488;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .info-card__link:hover {
+      text-decoration: underline;
+    }
+
+    .faq-preview {
+      background: linear-gradient(135deg, #f0fdfa, #eff6ff);
+      border: 1px solid rgba(20, 184, 166, 0.2);
+      border-radius: 14px;
+      padding: 1.5rem;
+    }
+
+    .faq-preview h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 1rem;
+    }
+
+    .faq-preview__q {
+      font-size: 0.85rem;
+      color: #334155;
+      padding: 0.625rem 0;
+      border-bottom: 1px solid rgba(20, 184, 166, 0.15);
+      font-weight: 500;
+    }
+
+    .faq-preview__q:last-child {
+      border-bottom: none;
+    }
+
+    /* Select estilo */
+    select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.875rem center;
+      background-size: 1rem;
+      padding-right: 2.5rem;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 0.9rem;
+      background: linear-gradient(135deg, #14b8a6, #2563eb);
+      color: white;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 14px rgba(20, 184, 166, 0.4);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(20, 184, 166, 0.5);
+    }
+
+    .btn-submit:active {
+      transform: translateY(0);
+    }
+
+    .form-disclaimer {
+      margin-top: 1rem;
+      font-size: 0.78rem;
+      color: #94a3b8;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .form-disclaimer a {
+      color: #0d9488;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <nav id="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Onux.IA - Inicio">
+        <span class="nav-brand-icon">⬡</span> Onux.IA
+      </a>
+      <div class="nav-links" id="nav-links-desktop">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="index.html#ia-generativa" class="nav-link">IA Generativa</a>
+        <a href="index.html#herramientas" class="nav-link">Herramientas</a>
+        <a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a>
+        <a href="contacto.html" class="nav-cta">Contacto</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="mobile-menu" role="menu">
+      <a href="index.html" class="nav-mobile-link" role="menuitem">🏠 Inicio</a>
+      <a href="blog.html" class="nav-mobile-link" role="menuitem">📰 Blog</a>
+      <a href="index.html#ia-generativa" class="nav-mobile-link" role="menuitem">🤖 IA Generativa</a>
+      <a href="index.html#herramientas" class="nav-mobile-link" role="menuitem">🛠️ Herramientas</a>
+      <a href="sobre-nosotros.html" class="nav-mobile-link" role="menuitem">👥 Sobre Nosotros</a>
+      <a href="contacto.html" class="nav-mobile-link" role="menuitem">✉️ Contacto</a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <a href="index.html">Inicio</a>
+          <span class="breadcrumb__sep">›</span>
+          <span>Contacto</span>
+        </nav>
+        <div class="page-hero__label">Escríbenos</div>
+        <h1 class="page-hero__title">Contacto</h1>
+        <p class="page-hero__subtitle">¿Tienes una pregunta, sugerencia o quieres colaborar con Onux.IA? Estamos aquí
+          para ayudarte. Respondemos todos los mensajes.</p>
+      </div>
+    </section>
+
+    <!-- FORMULARIO + INFO -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- Formulario -->
+          <div class="contact-form-wrap">
+            <h2 class="form-title">Envíanos un mensaje</h2>
+            <p class="form-subtitle">Completamos todos los mensajes en un plazo de 24-48 horas hábiles.</p>
+
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-nombre">Nombre *</label>
+                  <input type="text" id="contact-nombre" name="nombre" placeholder="Tu nombre" required
+                    autocomplete="given-name">
+                </div>
+                <div class="form-group">
+                  <label for="contact-email">Correo electrónico *</label>
+                  <input type="email" id="contact-email" name="email" placeholder="tucorreo@email.com" required
+                    autocomplete="email">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-asunto">Asunto *</label>
+                <select id="contact-asunto" name="asunto" required>
+                  <option value="" disabled selected>Selecciona un motivo</option>
+                  <option value="pregunta-contenido">Pregunta sobre contenido</option>
+                  <option value="correccion">Reportar un error o corrección</option>
+                  <option value="colaboracion">Propuesta de colaboración</option>
+                  <option value="publicidad">Publicidad y patrocinios</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-mensaje">Mensaje *</label>
+                <textarea id="contact-mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..."
+                  required></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit" id="btn-contacto-enviar">
+                Enviar mensaje
+              </button>
+
+              <p class="form-disclaimer">
+                Al enviar este formulario aceptas nuestra
+                <a href="privacidad.html">Política de Privacidad</a>.
+                No compartimos tu información con terceros.
+              </p>
+            </form>
+
+            <!-- Estado de éxito -->
+            <div class="form-success" id="form-success">
+              <div class="form-success__icon">✅</div>
+              <h3>¡Mensaje recibido!</h3>
+              <p>Gracias por contactarnos. Te responderemos en un plazo de 24-48 horas hábiles al correo que nos
+                indicaste.</p>
+            </div>
+
+          </div>
+
+          <!-- Info lateral -->
+          <div class="contact-info">
+
+            <div class="info-card">
+              <div class="info-card__icon">✉️</div>
+              <div class="info-card__title">Correo electrónico</div>
+              <p class="info-card__text">Para consultas generales o colaboraciones, escríbenos directamente a:</p>
+              <a href="mailto:hola@Onux.IA.xyz" class="info-card__link">hola@Onux.IA.xyz</a>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card__icon">⏱️</div>
+              <div class="info-card__title">Tiempo de respuesta</div>
+              <p class="info-card__text">Respondemos todos los mensajes en un máximo de <strong>48 horas
+                  hábiles</strong>. Los mensajes enviados los fines de semana se procesan el lunes.</p>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card__icon">🤝</div>
+              <div class="info-card__title">Colaboraciones y afiliados</div>
+              <p class="info-card__text">¿Tienes una herramienta de IA o tecnología y quieres que la analicemos?
+                Selecciona "Colaboración" en el formulario. Revisamos todas las propuestas, aunque no podemos garantizar
+                una publicación.</p>
+            </div>
+
+            <div class="faq-preview">
+              <h3>📋 Antes de escribirnos</h3>
+              <div class="faq-preview__q">¿Publican artículos patrocinados?</div>
+              <div class="faq-preview__q">¿Cómo funcionan sus recomendaciones de herramientas?</div>
+              <div class="faq-preview__q">¿Tienen presencia en redes sociales?</div>
+              <a href="sobre-nosotros.html"
+                style="display:block; margin-top:1rem; font-size:0.85rem; font-weight:700; color:#0d9488;">Ver
+                respuestas en Sobre Nosotros →</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-main" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand" aria-label="Onux.IA inicio"><span>⬡</span> Onux.IA</a>
+          <p class="footer-tagline">Tu guía de inteligencia artificial y tecnología en español para Latinoamérica.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col__title">Blog</h4>
+          <ul class="footer-col__links">
+            <li><a href="blog.html" class="footer-link">Todos los artículos</a></li>
+            <li><a href="mejores-herramientas-ia.html" class="footer-link">Herramientas IA</a></li>
+            <li><a href="guia-chatgpt.html" class="footer-link">Guía ChatGPT</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col__title">Nosotros</h4>
+          <ul class="footer-col__links">
+            <li><a href="sobre-nosotros.html" class="footer-link">Sobre Onux.IA</a></li>
+            <li><a href="contacto.html" class="footer-link">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col__title">Legal</h4>
+          <ul class="footer-col__links">
+            <li><a href="privacidad.html" class="footer-link">Política de Privacidad</a></li>
+            <li><a href="cookies.html" class="footer-link">Política de Cookies</a></li>
+            <li><a href="terminos.html" class="footer-link">Términos y Condiciones</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Onux.IA. Todos los derechos reservados.</p>
+        <p class="footer-bottom__disclaimer">El contenido de Onux.IA es informativo. No constituye asesoramiento
+          profesional.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('nav-scrolled', window.scrollY > 20); });
+    const hamburger = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Formulario de contacto
+    const form = document.getElementById('contact-form');
+    const successMsg = document.getElementById('form-success');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // Validación básica
+      const nombre = document.getElementById('contact-nombre').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
+      const asunto = document.getElementById('contact-asunto').value;
+      const mensaje = document.getElementById('contact-mensaje').value.trim();
+
+      if (!nombre || !email || !asunto || !mensaje) {
+        alert('Por favor completa todos los campos requeridos.');
+        return;
+      }
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert('Por favor ingresa un correo electrónico válido.');
+        return;
+      }
+
+      // Aquí iría la lógica de envío (Formspree, EmailJS, etc.)
+      // Por ahora mostramos el mensaje de éxito
+      form.style.display = 'none';
+      successMsg.style.display = 'block';
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,778 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onux.IA — IA, Tecnología y Herramientas Digitales en Español</title>
+    <meta name="description"
+        content="Onux.IA es tu guía de inteligencia artificial, tecnología y herramientas digitales en español. Aprende con guías completas, comparativas y tutoriales prácticos enfocados en Latinoamérica.">
+    <meta name="keywords"
+        content="inteligencia artificial, herramientas IA, tecnología, machine learning, ChatGPT, guías IA, Latinoamérica">
+    <meta name="author" content="Onux.IA">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://Onux.IA.xyz/">
+    <link rel="icon" href="/favicon.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Onux.IA — IA, Tecnología y Herramientas Digitales">
+    <meta property="og:description"
+        content="Tu guía de inteligencia artificial y tecnología en español. Guías, tutoriales y herramientas para Latinoamérica.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://Onux.IA.xyz/">
+    <meta property="og:locale" content="es_LA">
+
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="M_iv0jSkGSeAiC7azDsdlOFrXFdR5MCMOLqZHRrZzRE">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3404580755827598"
+        crossorigin="anonymous"></script>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Onux.IA",
+    "url": "https://Onux.IA.xyz/",
+    "description": "Guía de inteligencia artificial, tecnología y herramientas digitales en español para Latinoamérica",
+    "inLanguage": "es",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Onux.IA",
+      "url": "https://Onux.IA.xyz/"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+    <!-- ═══════════════════════════════════════
+       NAVEGACIÓN
+  ═══════════════════════════════════════ -->
+    <nav id="navbar" role="navigation" aria-label="Navegación principal">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand" aria-label="Onux.IA - Inicio">
+                <span class="nav-brand-icon">⬡</span> Onux.IA
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="nav-links" id="nav-links-desktop">
+                <a href="index.html" class="nav-link nav-link--active">Inicio</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="#ia-generativa" class="nav-link">IA Generativa</a>
+                <a href="#herramientas" class="nav-link">Herramientas</a>
+                <a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a>
+                <a href="contacto.html" class="nav-cta">Contacto</a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button class="nav-hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="nav-mobile" id="mobile-menu" role="menu">
+            <a href="index.html" class="nav-mobile-link" role="menuitem">🏠 Inicio</a>
+            <a href="blog.html" class="nav-mobile-link" role="menuitem">📰 Blog</a>
+            <a href="#ia-generativa" class="nav-mobile-link" role="menuitem">🤖 IA Generativa</a>
+            <a href="#herramientas" class="nav-mobile-link" role="menuitem">🛠️ Herramientas</a>
+            <a href="sobre-nosotros.html" class="nav-mobile-link" role="menuitem">👥 Sobre Nosotros</a>
+            <a href="contacto.html" class="nav-mobile-link" role="menuitem">✉️ Contacto</a>
+        </div>
+    </nav>
+
+    <main id="main-content">
+
+        <!-- ═══════════════════════════════════════
+         HERO SECTION
+    ═══════════════════════════════════════ -->
+        <section class="hero-section" aria-labelledby="hero-title">
+            <div class="hero-bg-glow"></div>
+            <div class="container hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge__dot"></span>
+                    Actualizado · Abril 2026
+                </div>
+
+                <h1 id="hero-title" class="hero-title">
+                    Tu Guía de <span class="hero-gradient-text">Inteligencia Artificial</span>
+                    <br>en Español
+                </h1>
+
+                <p class="hero-subtitle">
+                    Aprende a usar las herramientas de IA que están transformando el trabajo y los negocios en
+                    Latinoamérica.
+                    Guías prácticas, comparativas y análisis de la tecnología que más importa.
+                </p>
+
+                <div class="hero-cta-group">
+                    <a href="#guias" class="btn-primary" id="btn-ver-guias">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        Ver Guías Completas
+                    </a>
+                    <a href="#herramientas" class="btn-secondary" id="btn-ver-herramientas">
+                        Explorar Herramientas
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Stats -->
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <span class="stat-card__number">12+</span>
+                        <span class="stat-card__label">Artículos publicados</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-card__number">8</span>
+                        <span class="stat-card__label">Herramientas analizadas</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-card__number">100%</span>
+                        <span class="stat-card__label">Contenido en español</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+         CATEGORÍAS
+    ═══════════════════════════════════════ -->
+        <section class="section-categories" aria-labelledby="categories-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="categories-title" class="section-title">Explora por Categoría</h2>
+                    <p class="section-subtitle">Todo lo que necesitas saber sobre IA y tecnología, organizado para que
+                        aprendas rápido.</p>
+                </div>
+
+                <div class="categories-grid">
+                    <a href="#ia-generativa" class="category-card" id="cat-ia-generativa">
+                        <div class="category-card__icon" style="background:linear-gradient(135deg,#ccfbf1,#d1fae5);">🤖
+                        </div>
+                        <h3 class="category-card__title">IA Generativa</h3>
+                        <p class="category-card__desc">ChatGPT, Gemini, Claude y los modelos que están cambiando todo.
+                        </p>
+                        <span class="category-card__count">4 artículos</span>
+                    </a>
+                    <a href="#machine-learning" class="category-card" id="cat-machine-learning">
+                        <div class="category-card__icon" style="background:linear-gradient(135deg,#dbeafe,#e0e7ff);">🧠
+                        </div>
+                        <h3 class="category-card__title">Machine Learning</h3>
+                        <p class="category-card__desc">Conceptos clave del aprendizaje automático explicados sin
+                            tecnicismos.</p>
+                        <span class="category-card__count">3 artículos</span>
+                    </a>
+                    <a href="#herramientas" class="category-card" id="cat-herramientas">
+                        <div class="category-card__icon" style="background:linear-gradient(135deg,#fef3c7,#fde68a);">🛠️
+                        </div>
+                        <h3 class="category-card__title">Herramientas IA</h3>
+                        <p class="category-card__desc">Las mejores apps, extensiones y plataformas de inteligencia
+                            artificial.</p>
+                        <span class="category-card__count">8 reseñas</span>
+                    </a>
+                    <a href="#guias" class="category-card" id="cat-guias">
+                        <div class="category-card__icon" style="background:linear-gradient(135deg,#ede9fe,#fce7f3);">📚
+                        </div>
+                        <h3 class="category-card__title">Guías Paso a Paso</h3>
+                        <p class="category-card__desc">Tutoriales completos para que apliques la IA en tu trabajo hoy
+                            mismo.</p>
+                        <span class="category-card__count">2 guías</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+         ARTÍCULOS — IA GENERATIVA
+    ═══════════════════════════════════════ -->
+        <section id="ia-generativa" class="section-articles" aria-labelledby="ia-title">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label">IA Generativa</div>
+                    <h2 id="ia-title" class="section-title">El Poder de la IA que Crea</h2>
+                    <p class="section-subtitle">Desde GPT hasta modelos de imagen: entiende qué son, cómo funcionan y
+                        cómo usarlos.</p>
+                </div>
+
+                <div class="articles-grid">
+                    <!-- Artículo 1 -->
+                    <article class="post-card" id="art-ia-generativa">
+                        <a href="articulo1-ia-generativa.html" class="post-card__image-link" tabindex="-1">
+                            <div class="post-card__image-wrap">
+                                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800"
+                                    alt="Ilustración de inteligencia artificial generativa con redes neuronales"
+                                    loading="lazy" width="800" height="450">
+                                <span class="post-card__badge post-card__badge--intro">IA Generativa</span>
+                            </div>
+                        </a>
+                        <div class="post-card__body">
+                            <div class="post-card__accent"></div>
+                            <div class="post-card__meta">
+                                <span>📅 Abril 2026</span>
+                                <span>⏱️ 8 min de lectura</span>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="articulo1-ia-generativa.html">El Despertar de la IA Generativa: Cómo Funciona y
+                                    Por Qué Importa</a>
+                            </h3>
+                            <p class="post-card__excerpt">La IA generativa ha pasado de experimentos académicos a
+                                transformar industrias completas. Descubre qué son los modelos generativos, cómo crean
+                                contenido y qué significa esto para tu trabajo.</p>
+                            <a href="articulo1-ia-generativa.html" class="post-card__link">
+                                Leer artículo completo
+                                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo Guía ChatGPT -->
+                    <article class="post-card post-card--featured" id="art-guia-chatgpt">
+                        <a href="guia-chatgpt.html" class="post-card__image-link" tabindex="-1">
+                            <div class="post-card__image-wrap">
+                                <img src="https://images.unsplash.com/photo-1684487747720-1ba29cda82f8?auto=format&fit=crop&q=80&w=800"
+                                    alt="Persona usando ChatGPT en laptop para productividad" loading="lazy" width="800"
+                                    height="450">
+                                <span class="post-card__badge post-card__badge--guide">Guía Completa</span>
+                                <span class="post-card__featured-label">⭐ Destacado</span>
+                            </div>
+                        </a>
+                        <div class="post-card__body">
+                            <div class="post-card__accent"></div>
+                            <div class="post-card__meta">
+                                <span>📅 Abril 2026</span>
+                                <span>⏱️ 15 min de lectura</span>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="guia-chatgpt.html">Cómo Usar ChatGPT: Guía Completa para Principiantes y
+                                    Usuarios Avanzados</a>
+                            </h3>
+                            <p class="post-card__excerpt">Todo lo que necesitas saber para dominar ChatGPT: desde crear
+                                tu cuenta hasta técnicas avanzadas de prompting. Incluye ejemplos reales y errores
+                                comunes a evitar.</p>
+                            <a href="guia-chatgpt.html" class="post-card__link">
+                                Leer guía completa
+                                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo Sesgos -->
+                    <article class="post-card" id="art-sesgos">
+                        <a href="articulo6-sesgos.html" class="post-card__image-link" tabindex="-1">
+                            <div class="post-card__image-wrap">
+                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
+                                    alt="Concepto de sesgos algorítmicos en inteligencia artificial" loading="lazy"
+                                    width="800" height="450">
+                                <span class="post-card__badge post-card__badge--intro">Ética IA</span>
+                            </div>
+                        </a>
+                        <div class="post-card__body">
+                            <div class="post-card__accent"></div>
+                            <div class="post-card__meta">
+                                <span>📅 Marzo 2026</span>
+                                <span>⏱️ 7 min de lectura</span>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="articulo6-sesgos.html">El Peligro de los Sesgos en la IA: Qué Son y Cómo
+                                    Evitarlos</a>
+                            </h3>
+                            <p class="post-card__excerpt">Los sistemas de IA pueden discriminar si no se diseñan con
+                                cuidado. Explicamos qué son los sesgos algorítmicos, con ejemplos reales y cómo la
+                                industria está respondiendo.</p>
+                            <a href="articulo6-sesgos.html" class="post-card__link">
+                                Leer artículo completo
+                                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+         ADSENSE — BANNER HORIZONTAL
+    ═══════════════════════════════════════ -->
+        <div class="ad-container" aria-label="Publicidad">
+            <p class="ad-label">Publicidad</p>
+            <ins class="adsbygoogle ad-wrapper" style="display:block" data-ad-client="ca-pub-3404580755827598"
+                data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- ═══════════════════════════════════════
+         ARTÍCULOS — MACHINE LEARNING
+    ═══════════════════════════════════════ -->
+        <section id="machine-learning" class="section-articles section-articles--alt" aria-labelledby="ml-title">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label">Machine Learning</div>
+                    <h2 id="ml-title" class="section-title">Aprendizaje Automático sin Código</h2>
+                    <p class="section-subtitle">Entiende los conceptos que mueven a la IA moderna, explicados de forma
+                        clara y práctica.</p>
+                </div>
+
+                <div class="articles-grid">
+                    <!-- ML artículo 2 -->
+                    <article class="post-card" id="art-machine-learning">
+                        <a href="articulo2-machine-learning.html" class="post-card__image-link" tabindex="-1">
+                            <div class="post-card__image-wrap">
+                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800"
+                                    alt="Visualización de redes neuronales de machine learning" loading="lazy"
+                                    width="800" height="450">
+                                <span class="post-card__badge post-card__badge--ml">Machine Learning</span>
+                            </div>
+                        </a>
+                        <div class="post-card__body">
+                            <div class="post-card__accent"></div>
+                            <div class="post-card__meta">
+                                <span>📅 Abril 2026</span>
+                                <span>⏱️ 9 min de lectura</span>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="articulo2-machine-learning.html">Machine Learning: Qué Es, Cómo Funciona y Sus
+                                    Aplicaciones Reales</a>
+                            </h3>
+                            <p class="post-card__excerpt">El aprendizaje automático es la base de todo lo que conocemos
+                                como IA. Explicamos sus tipos, casos de uso en el mundo real y qué debes saber si
+                                quieres trabajar con esta tecnología.</p>
+                            <a href="articulo2-machine-learning.html" class="post-card__link">
+                                Leer artículo completo
+                                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo Medicina -->
+                    <article class="post-card" id="art-medicina">
+                        <a href="articulo3-medicina.html" class="post-card__image-link" tabindex="-1">
+                            <div class="post-card__image-wrap">
+                                <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=800"
+                                    alt="Médico usando inteligencia artificial para diagnóstico médico" loading="lazy"
+                                    width="800" height="450">
+                                <span class="post-card__badge post-card__badge--apps">Aplicaciones</span>
+                            </div>
+                        </a>
+                        <div class="post-card__body">
+                            <div class="post-card__accent"></div>
+                            <div class="post-card__meta">
+                                <span>📅 Marzo 2026</span>
+                                <span>⏱️ 8 min de lectura</span>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="articulo3-medicina.html">IA en la Medicina: Cómo Está Revolucionando los
+                                    Diagnósticos</a>
+                            </h3>
+                            <p class="post-card__excerpt">Los algoritmos de deep learning detectan cánceres, predicen
+                                enfermedades y aceleran el descubrimiento de medicamentos. Un repaso a los avances más
+                                importantes de la IA médica.</p>
+                            <a href="articulo3-medicina.html" class="post-card__link">
+                                Leer artículo completo
+                                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo Industria -->
+                    <article class="post-card" id="art-industria">
+                        <a href="articulo4-industria.html" class="post-card__image-link" tabindex="-1">
+                            <div class="post-card__image-wrap">
+                                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800"
+                                    alt="Automatización industrial con robots e inteligencia artificial" loading="lazy"
+                                    width="800" height="450">
+                                <span class="post-card__badge post-card__badge--apps">Industria 4.0</span>
+                            </div>
+                        </a>
+                        <div class="post-card__body">
+                            <div class="post-card__accent"></div>
+                            <div class="post-card__meta">
+                                <span>📅 Marzo 2026</span>
+                                <span>⏱️ 7 min de lectura</span>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="articulo4-industria.html">Automatización con IA en la Industria 4.0: Casos
+                                    Reales</a>
+                            </h3>
+                            <p class="post-card__excerpt">Las fábricas inteligentes usan IA para predecir fallas,
+                                optimizar cadenas de suministro y reducir costos. Te mostramos cómo empresas en LATAM ya
+                                están implementando estas soluciones.</p>
+                            <a href="articulo4-industria.html" class="post-card__link">
+                                Leer artículo completo
+                                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+         HERRAMIENTAS RECOMENDADAS
+    ═══════════════════════════════════════ -->
+        <section id="herramientas" class="section-tools" aria-labelledby="tools-title">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label">Herramientas</div>
+                    <h2 id="tools-title" class="section-title">Las Mejores Herramientas de IA en 2025</h2>
+                    <p class="section-subtitle">Analizamos las herramientas que realmente funcionan y te explicamos
+                        cuándo usar cada una.</p>
+                </div>
+
+                <div class="tools-grid">
+                    <a href="guia-chatgpt.html" class="tool-card" id="tool-chatgpt">
+                        <div class="tool-icon" style="background:#e8fdf5;">🤖</div>
+                        <div class="tool-info">
+                            <h3 class="tool-name">ChatGPT</h3>
+                            <p class="tool-desc">El asistente de IA más popular. Ideal para escribir, programar y
+                                resolver problemas.</p>
+                            <div class="tool-tags">
+                                <span class="tool-tag">Escritura</span>
+                                <span class="tool-tag">Código</span>
+                                <span class="tool-tag">Gratis + Pro</span>
+                            </div>
+                        </div>
+                        <div class="tool-arrow">→</div>
+                    </a>
+
+                    <a href="mejores-herramientas-ia.html" class="tool-card" id="tool-midjourney">
+                        <div class="tool-icon" style="background:#eff6ff;">🎨</div>
+                        <div class="tool-info">
+                            <h3 class="tool-name">Midjourney</h3>
+                            <p class="tool-desc">Generador de imágenes de alta calidad. Perfecto para diseño y marketing
+                                visual.</p>
+                            <div class="tool-tags">
+                                <span class="tool-tag">Imágenes</span>
+                                <span class="tool-tag">Diseño</span>
+                                <span class="tool-tag">De pago</span>
+                            </div>
+                        </div>
+                        <div class="tool-arrow">→</div>
+                    </a>
+
+                    <a href="mejores-herramientas-ia.html" class="tool-card" id="tool-gemini">
+                        <div class="tool-icon" style="background:#fef9ee;">✨</div>
+                        <div class="tool-info">
+                            <h3 class="tool-name">Google Gemini</h3>
+                            <p class="tool-desc">El modelo de Google integrado con Search y Workspace. Muy útil para
+                                investigación.</p>
+                            <div class="tool-tags">
+                                <span class="tool-tag">Investigación</span>
+                                <span class="tool-tag">Productividad</span>
+                                <span class="tool-tag">Gratis</span>
+                            </div>
+                        </div>
+                        <div class="tool-arrow">→</div>
+                    </a>
+
+                    <a href="mejores-herramientas-ia.html" class="tool-card" id="tool-claude">
+                        <div class="tool-icon" style="background:#faf5ff;">🧠</div>
+                        <div class="tool-info">
+                            <h3 class="tool-name">Claude (Anthropic)</h3>
+                            <p class="tool-desc">Excelente para análisis de textos largos y razonamiento complejo.</p>
+                            <div class="tool-tags">
+                                <span class="tool-tag">Análisis</span>
+                                <span class="tool-tag">Textos largos</span>
+                                <span class="tool-tag">Gratis + Pro</span>
+                            </div>
+                        </div>
+                        <div class="tool-arrow">→</div>
+                    </a>
+
+                    <a href="mejores-herramientas-ia.html" class="tool-card" id="tool-canva">
+                        <div class="tool-icon" style="background:#fff1f2;">🖼️</div>
+                        <div class="tool-info">
+                            <h3 class="tool-name">Canva IA</h3>
+                            <p class="tool-desc">El diseño gráfico + IA. Crea presentaciones, posts y materiales
+                                visuales sin ser diseñador.</p>
+                            <div class="tool-tags">
+                                <span class="tool-tag">Diseño</span>
+                                <span class="tool-tag">LATAM popular</span>
+                                <span class="tool-tag">Gratis + Pro</span>
+                            </div>
+                        </div>
+                        <div class="tool-arrow">→</div>
+                    </a>
+
+                    <a href="mejores-herramientas-ia.html" class="tool-card" id="tool-perplexity">
+                        <div class="tool-icon" style="background:#f0fdf4;">🔍</div>
+                        <div class="tool-info">
+                            <h3 class="tool-name">Perplexity AI</h3>
+                            <p class="tool-desc">El buscador del futuro. Respuestas con fuentes verificadas, ideal para
+                                investigación.</p>
+                            <div class="tool-tags">
+                                <span class="tool-tag">Búsqueda</span>
+                                <span class="tool-tag">Investigación</span>
+                                <span class="tool-tag">Gratis</span>
+                            </div>
+                        </div>
+                        <div class="tool-arrow">→</div>
+                    </a>
+                </div>
+
+                <div class="tools-cta">
+                    <a href="mejores-herramientas-ia.html" class="btn-outline">
+                        Ver comparativa completa de herramientas →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+         GUÍAS COMPLETAS
+    ═══════════════════════════════════════ -->
+        <section id="guias" class="section-guides" aria-labelledby="guides-title">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label">Guías</div>
+                    <h2 id="guides-title" class="section-title">Aprende con Guías Paso a Paso</h2>
+                    <p class="section-subtitle">Tutoriales completos y prácticos. Sin rodeos, directo a lo que funciona.
+                    </p>
+                </div>
+
+                <div class="guides-grid">
+                    <a href="guia-chatgpt.html" class="guide-card" id="guide-chatgpt">
+                        <div class="guide-card__number">01</div>
+                        <div class="guide-card__content">
+                            <div class="guide-card__label">Guía Completa</div>
+                            <h3 class="guide-card__title">Cómo Usar ChatGPT desde Cero</h3>
+                            <p class="guide-card__desc">Desde crear tu cuenta hasta técnicas de prompting avanzado.
+                                Aprende a sacarle el máximo partido al asistente de IA más popular del mundo.</p>
+                            <div class="guide-card__meta">
+                                <span>⏱️ 15 min de lectura</span>
+                                <span>🎯 Nivel: Todos</span>
+                            </div>
+                            <span class="guide-card__link">Leer guía →</span>
+                        </div>
+                    </a>
+
+                    <a href="mejores-herramientas-ia.html" class="guide-card" id="guide-herramientas">
+                        <div class="guide-card__number">02</div>
+                        <div class="guide-card__content">
+                            <div class="guide-card__label">Comparativa 2025</div>
+                            <h3 class="guide-card__title">Las 10 Mejores Herramientas IA para Trabajar Más Rápido</h3>
+                            <p class="guide-card__desc">ChatGPT vs Gemini vs Claude y más. Analizamos cuál es mejor para
+                                cada caso de uso con pros, contras y precios actualizados.</p>
+                            <div class="guide-card__meta">
+                                <span>⏱️ 12 min de lectura</span>
+                                <span>🎯 Nivel: Intermedio</span>
+                            </div>
+                            <span class="guide-card__link">Ver comparativa →</span>
+                        </div>
+                    </a>
+
+                    <a href="articulo5-cursos.html" class="guide-card" id="guide-cursos">
+                        <div class="guide-card__number">03</div>
+                        <div class="guide-card__content">
+                            <div class="guide-card__label">Recursos</div>
+                            <h3 class="guide-card__title">Los Mejores Cursos de IA Gratuitos y de Pago en 2025</h3>
+                            <p class="guide-card__desc">Plataformas gratuitas y de pago para aprender IA desde cero:
+                                Python, Machine Learning, TensorFlow y más. Actualizados para el mercado
+                                latinoamericano.</p>
+                            <div class="guide-card__meta">
+                                <span>⏱️ 10 min de lectura</span>
+                                <span>🎯 Nivel: Principiante</span>
+                            </div>
+                            <span class="guide-card__link">Ver recursos →</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+         ADSENSE — BANNER CUADRADO
+    ═══════════════════════════════════════ -->
+        <div class="ad-container" aria-label="Publicidad">
+            <p class="ad-label">Publicidad</p>
+            <ins class="adsbygoogle ad-wrapper" style="display:block" data-ad-client="ca-pub-3404580755827598"
+                data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- ═══════════════════════════════════════
+         SECCIÓN PARA LATINOAMÉRICA
+    ═══════════════════════════════════════ -->
+        <section class="section-latam" aria-labelledby="latam-title">
+            <div class="container">
+                <div class="latam-card">
+                    <div class="latam-card__content">
+                        <div class="latam-card__badge">🌎 Enfocado en LATAM</div>
+                        <h2 id="latam-title" class="latam-card__title">IA para el Trabajador Latinoamericano</h2>
+                        <p class="latam-card__text">
+                            En Onux.IA entendemos que la realidad tecnológica de México, Colombia, Perú, Argentina y el
+                            resto de Latinoamérica es distinta.
+                            Por eso nuestros contenidos se enfocan en herramientas accesibles, con precios en la región,
+                            que funcionan en español y que realmente puedes implementar <strong>hoy mismo</strong>.
+                        </p>
+                        <ul class="latam-list">
+                            <li>✅ Herramientas con versión gratuita o precio accesible</li>
+                            <li>✅ Ejemplos con contexto latinoamericano</li>
+                            <li>✅ Sin jerga técnica innecesaria</li>
+                            <li>✅ Actualizaciones constantes del ecosistema IA</li>
+                        </ul>
+                        <a href="sobre-nosotros.html" class="btn-primary" id="btn-conocer-Onux.IA">
+                            Conocer más sobre Onux.IA →
+                        </a>
+                    </div>
+                    <div class="latam-card__visual" aria-hidden="true">
+                        <div class="latam-stats-visual">
+                            <div class="latam-stat">
+                                <span class="latam-stat__num">+650M</span>
+                                <span class="latam-stat__label">hispanohablantes en el mundo</span>
+                            </div>
+                            <div class="latam-stat">
+                                <span class="latam-stat__num">35%</span>
+                                <span class="latam-stat__label">de empresas LATAM ya usan IA</span>
+                            </div>
+                            <div class="latam-stat">
+                                <span class="latam-stat__num">2x</span>
+                                <span class="latam-stat__label">más productivo con IA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+    <footer class="footer-main" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand -->
+                <div class="footer-brand-col">
+                    <a href="index.html" class="footer-brand" aria-label="Onux.IA inicio">
+                        <span>⬡</span> Onux.IA
+                    </a>
+                    <p class="footer-tagline">Tu guía de inteligencia artificial y tecnología en español. Contenido
+                        práctico para el profesional latinoamericano.</p>
+                    <div class="footer-socials">
+                        <a href="https://x.com/NicolaRosse" target="_blank" rel="noopener noreferrer"
+                            class="social-icon" aria-label="X (Twitter) de Onux.IA">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contenido -->
+                <div class="footer-col">
+                    <h4 class="footer-col__title">Blog</h4>
+                    <ul class="footer-col__links">
+                        <li><a href="blog.html" class="footer-link">Todos los artículos</a></li>
+                        <li><a href="articulo1-ia-generativa.html" class="footer-link">IA Generativa</a></li>
+                        <li><a href="mejores-herramientas-ia.html" class="footer-link">Herramientas IA</a></li>
+                        <li><a href="guia-chatgpt.html" class="footer-link">Guía ChatGPT</a></li>
+                        <li><a href="articulo5-cursos.html" class="footer-link">Cursos Recomendados</a></li>
+                    </ul>
+                </div>
+
+                <!-- Nosotros -->
+                <div class="footer-col">
+                    <h4 class="footer-col__title">Nosotros</h4>
+                    <ul class="footer-col__links">
+                        <li><a href="sobre-nosotros.html" class="footer-link">Sobre Onux.IA</a></li>
+                        <li><a href="contacto.html" class="footer-link">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div class="footer-col">
+                    <h4 class="footer-col__title">Legal</h4>
+                    <ul class="footer-col__links">
+                        <li><a href="privacidad.html" class="footer-link">Política de Privacidad</a></li>
+                        <li><a href="cookies.html" class="footer-link">Política de Cookies</a></li>
+                        <li><a href="terminos.html" class="footer-link">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Onux.IA. Todos los derechos reservados.</p>
+                <p class="footer-bottom__disclaimer">El contenido de Onux.IA es informativo. No constituye asesoramiento
+                    profesional.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('nav-scrolled', window.scrollY > 20);
+        });
+
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        hamburger.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('open');
+            hamburger.classList.toggle('open', isOpen);
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                hamburger.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', false);
+            });
+        });
+
+        // Intersection Observer para animaciones
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.post-card, .tool-card, .guide-card, .category-card').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
